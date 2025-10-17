@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_13"
+type="Resource"
+uid="uid://bgefp3od0bioy"
+path="res://.godot/imported/economist_rebecca.dialogue-674f7ac41142aa233452a770888e3151.tres"
+
+[deps]
+
+source_file="res://source/actors/npc/map_2/economist_rebecca/economist_rebecca.dialogue"
+dest_files=["res://.godot/imported/economist_rebecca.dialogue-674f7ac41142aa233452a770888e3151.tres"]
+
+[params]
+
+defaults=true

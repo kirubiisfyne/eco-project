@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_13"
+type="Resource"
+uid="uid://de3fdcel6agls"
+path="res://.godot/imported/police.dialogue-f0df046b4765f6f05b26bf68e5ce64bc.tres"
+
+[deps]
+
+source_file="res://source/actors/npc/police/police.dialogue"
+dest_files=["res://.godot/imported/police.dialogue-f0df046b4765f6f05b26bf68e5ce64bc.tres"]
+
+[params]
+
+defaults=true

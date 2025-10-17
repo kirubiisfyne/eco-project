@@ -1,0 +1,29 @@
+~ quest_available
+Jerico the Lifeguard: Hold up there, friend—careful near the waterline!
+- What’s wrong?
+- Is it not safe?
+Jerico the Lifeguard: Not with all that trash floating around. Sharp plastics, broken glass… it’s a hazard zone out there.
+Jerico the Lifeguard: I’ve tried clearing it myself, day after day… but it just keeps piling up. I can’t keep swimmers safe like this.
+Jerico the Lifeguard: I hate asking, but—I need backup. Someone with heart, someone who cares. Can you lend a hand?
+- Absolutely, Jerico.
+- I’ve got your back.
+Jerico the Lifeguard: Thank you. With your help, we can make this beach safe again—for everyone.
+do PlayerConditionals.is_dialogue = false
+set Quests.open_mis_map_3(4)
+set Quests.set_jerico_the_life_guard(2)
+=> END
+
+~ quest_done
+Jerico the Lifeguard: Well would you look at that—clear shore, clean waves, and not a single soda can in sight!
+- We pulled it off, huh?
+-It looks amazing now!
+Jerico the Lifeguard: You’re telling me! I haven’t seen the beach this safe in weeks. Kids can run barefoot, swimmers can dive in—just how it should be.
+Jerico the Lifeguard: I owe you one, truly. You didn’t just help me—you protected this whole community.
+Jerico the Lifeguard: From one guardian to another… thank you. You’ve got a lifeguard’s heart.
+- Anytime, Jerico.
+- We’re in this together.
+Jerico the Lifeguard: Heck yeah we are. This beach? It’s in good hands now.
+do PlayerConditionals.is_dialogue = false
+do PlayerConditionals.map3_score += 1
+=> END
+

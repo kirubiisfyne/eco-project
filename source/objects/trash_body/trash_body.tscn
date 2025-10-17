@@ -1,0 +1,31 @@
+[gd_scene load_steps=6 format=3 uid="uid://d12pcva17p0o6"]
+
+[ext_resource type="Script" uid="uid://xv3xe6qfeuyr" path="res://source/objects/trash_body/trash_body.gd" id="1_6t4jd"]
+[ext_resource type="Texture2D" uid="uid://bilell472omr2" path="res://assets/objects/TrashBody/ME_Singles_City_Props_16x16_Trash_Pile_2.png" id="2_02nsg"]
+[ext_resource type="Texture2D" uid="uid://pwcb4gb4nc0b" path="res://assets/objects/TrashBody/ME_Singles_City_Props_16x16_Trash_Pile_3.png" id="3_kwcrk"]
+[ext_resource type="Texture2D" uid="uid://c3iry7itevpss" path="res://assets/objects/TrashBody/ME_Singles_City_Props_16x16_Trash_Pile_4.png" id="4_avqhc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cw8ep"]
+size = Vector2(64, 40)
+
+[node name="TrashBody" type="StaticBody2D" groups=["trashbody"]]
+script = ExtResource("1_6t4jd")
+
+[node name="Sprite1" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(32, -16)
+texture = ExtResource("2_02nsg")
+
+[node name="Sprite2" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(32, -16)
+texture = ExtResource("3_kwcrk")
+
+[node name="Sprite3" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(32, -24)
+texture = ExtResource("4_avqhc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(32, -20)
+shape = SubResource("RectangleShape2D_cw8ep")

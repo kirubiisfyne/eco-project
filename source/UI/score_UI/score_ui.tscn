@@ -1,0 +1,34 @@
+[gd_scene load_steps=4 format=3 uid="uid://n2aqq8k1qrta"]
+
+[ext_resource type="Texture2D" uid="uid://0nerba80ci3" path="res://assets/tileset/UI_set/mga_smiley_face.png" id="1_n8fie"]
+[ext_resource type="Script" uid="uid://b6cqijtdwmq6n" path="res://source/UI/score_UI/score_ui.gd" id="1_sh6p3"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tcpn8"]
+atlas = ExtResource("1_n8fie")
+region = Rect2(34, 4, 12, 10)
+
+[node name="score_UI" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_sh6p3")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_right = 151.0
+offset_bottom = 56.0
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+size_flags_horizontal = 3
+texture = SubResource("AtlasTexture_tcpn8")
+stretch_mode = 4
+
+[node name="Label" type="Label" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "0 / 5"

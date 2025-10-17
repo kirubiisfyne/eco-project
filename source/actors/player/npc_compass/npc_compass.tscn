@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://ddmi7pevk31sj"]
+
+[ext_resource type="Texture2D" uid="uid://bmfhjke4mtc8i" path="res://assets/UI/Modern_UI_Style_2.png" id="1_5ltxx"]
+[ext_resource type="Script" uid="uid://w348by0fp0bl" path="res://source/actors/player/npc_compass/npc_compass.gd" id="1_fwk8l"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kwi4k"]
+atlas = ExtResource("1_5ltxx")
+region = Rect2(452, 131, 9, 11)
+
+[node name="NPCCompass" type="Node2D"]
+script = ExtResource("1_fwk8l")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(18, 0)
+texture = SubResource("AtlasTexture_kwi4k")

@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_13"
+type="Resource"
+uid="uid://n3iubg1jktsb"
+path="res://.godot/imported/adventurer_michel.dialogue-287ba1b14d027404c80b0e967aca04b7.tres"
+
+[deps]
+
+source_file="res://source/actors/npc/adventurer_mic1/adventurer_michel.dialogue"
+dest_files=["res://.godot/imported/adventurer_michel.dialogue-287ba1b14d027404c80b0e967aca04b7.tres"]
+
+[params]
+
+defaults=true

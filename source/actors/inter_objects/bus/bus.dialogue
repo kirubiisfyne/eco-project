@@ -1,0 +1,32 @@
+~ quest_finished
+Bus Driver Joseph: Hey there, {{PlayerConditionals.player_name}}!
+Bus Driver Joseph: Seems like you've finished all the cleaning in this area! Are you ready to go now?
+- Not yet...
+	Bus Driver Joseph: Alrighty then! I'll still be waiting for you here!
+	do PlayerConditionals.is_dialogue = false
+	=> END
+- Let's go!
+	Bus Driver Joseph: Great! Hop in and let's go!
+	do PlayerConditionals.is_dialogue = false
+	set Cutscenes.mg_cut_2()
+	=> END
+
+~ quest_not_finished
+Bus Driver Joseph: Hey there, {{PlayerConditionals.player_name}}!
+Bus Driver Joseph: Seems like you haven't finished all the cleaning in this area..
+Bus Driver Joseph: You should go back and finish some of them!
+do PlayerConditionals.is_dialogue = false
+=> END
+
+~ quest_finished2
+Bus Driver Joseph: Hey there, {{PlayerConditionals.player_name}}!
+Bus Driver Joseph: Seems like you've finished all the cleaning in this area! Are you ready to go now?
+- Not yet...
+	Bus Driver Joseph: Alrighty then! I'll still be waiting for you here!
+	do PlayerConditionals.is_dialogue = false
+	=> END
+- Let's go!
+	Bus Driver Joseph: Great! Hop in and let's go!
+	do PlayerConditionals.is_dialogue = false
+	set Cutscenes.mg2_cut_2()
+	=> END

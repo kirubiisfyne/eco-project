@@ -1,0 +1,37 @@
+[gd_scene load_steps=5 format=3 uid="uid://b70pxq1k24mae"]
+
+[ext_resource type="Texture2D" uid="uid://f1t0c4vdu3r2" path="res://assets/objects/tileset/mga_basura.png" id="1_c7jid"]
+[ext_resource type="Script" uid="uid://dua4r8osre5c5" path="res://source/UI/segregation_ui/trash/trash_container.gd" id="1_h0ib7"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1614d"]
+atlas = ExtResource("1_c7jid")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gpqpl"]
+size = Vector2(84, 79)
+
+[node name="TrashContainer" type="Panel"]
+self_modulate = Color(1, 1, 1, 0.508)
+z_index = 2
+offset_right = 85.0
+offset_bottom = 79.0
+script = ExtResource("1_h0ib7")
+
+[node name="Sprite2D" type="TextureRect" parent="."]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_1614d")
+stretch_mode = 4
+
+[node name="TrashArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TrashArea"]
+position = Vector2(43, 39.5)
+shape = SubResource("RectangleShape2D_gpqpl")
+
+[connection signal="gui_input" from="." to="." method="_on_gui_input"]

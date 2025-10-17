@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://ccbfbg38wl1ag"]
+
+[ext_resource type="Texture2D" uid="uid://kuuqmv3vtitb" path="res://assets/objects/trashcan_sprite.png" id="1_jioiv"]
+[ext_resource type="Script" uid="uid://ubrq6atviuei" path="res://source/objects/trash_bin/trash_bin.gd" id="1_r1aye"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f5mbm"]
+size = Vector2(32, 16)
+
+[node name="TrashBin" type="StaticBody2D"]
+script = ExtResource("1_r1aye")
+
+[node name="TrashcanSprite" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(16, -8)
+texture = ExtResource("1_jioiv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(16, -8)
+shape = SubResource("RectangleShape2D_f5mbm")

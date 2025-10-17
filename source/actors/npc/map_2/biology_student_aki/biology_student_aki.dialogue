@@ -1,0 +1,24 @@
+~ quest_available
+Biology Student Aki: According to my calculations, these saplings with special fertilizer in them will yield healthy fruits.
+Biology Student Aki: I have dedicated my LIFE to CREATING the BEST tree in the PLANETTTT!
+Biology Student Aki: With good fruits... and uhmm... uhmm..
+Biology Student Aki: BETTER PHOTOSYNTHESIS POWERS
+Biology Student Aki: Although my hands are tired of planting by now... I need help to carry my experiment out.
+Biology Student Aki: You are the guy helping the community, right? Would you help me with the plants?
+- Of course!
+- That's the reason I'm here!
+Biology Student Aki: GREAT!
+Biology Student Aki: My experiments will be complete with your help!
+do PlayerConditionals.is_dialogue = false
+set Quests.open_mis_map_2(4)
+set Quests.set_biology_student_aki(2)
+=> END
+
+~ quest_done
+Biology Student Aki: According to my calculations, this experiment will take longer than I expected if it were'nt for your help.
+Biology Student Aki: So I would like to thank you for this. Please continue helping the betterment of this planet.
+- Don't worry about it!
+do PlayerConditionals.is_dialogue = false
+set Quests.remove_objective("Biology Student Aki")
+do PlayerConditionals.map2_score += 1
+=> END

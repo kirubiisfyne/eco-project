@@ -1,0 +1,79 @@
+~ starting_tutorial
+Police: Hey there, {{PlayerConditionals.player_name}}!
+Police: This is the community service! Thank you for volunteering!
+Police: Our mission is to clean!
+Police: And to spread our cleaning generosity!
+Police: Are you ready!?
+- Yes, Sir!
+	Police: Good!
+- No...?
+	Police: What do you mean "No"??
+Police: First! Remember the 5 important KEYS!
+Police: W is forward, A is left, S is backward, and D is right!
+Police: W, A, S, D keys! W, A, S, D keys!
+Police: And the last one is E!
+Police: E is for INTERACTING!
+Press WASD to move. and press E to interact to NPCs or Objects.
+Try interacting with the Police with a Sad Face on top of his head!
+The Sad Face indicates quest progress! Blue face for "Quest Available"
+Yellow indicates for "Quest Ongoing"
+and Green indicates for "Quest finished!"
+Go on! Talk to him! Don't be shy!
+do PlayerConditionals.is_dialogue = false
+=> END
+
+~ quest_available
+Police: Good!
+Police: Get a hang a bit more of your movement before you do anything shady!
+Police: Anyway, CONTINUE WITH THE COMMUNITY SERVICE!
+Police: Clean all the trashes!
+
+Interact (Press E) with the trashes you see on the ground.
+do PlayerConditionals.movement_tut_done = true
+do PlayerConditionals.is_dialogue = false
+=> END
+
+~ not_finished_tutorial
+Police: Hey! Don't do anything yet!
+Police: Talk to me!
+Interact with the Police...
+
+do PlayerConditionals.is_dialogue = false
+=> END
+
+~ all_trash_cleaned
+Police: Alright! That's enough now!
+Police: Get back here and talk to me!
+
+After a quest has been finished, go back to the NPC that the quest came from
+When finishing a quest, you can get bountiful rewards.
+
+do PlayerConditionals.is_dialogue = false
+=> END
+
+
+~ quest_finished
+Police: Very well! You're doing great!
+- Thanks! I'm ready to step out the outside world now!
+set Cutscenes.tut_cut_1()
+Police Commando: Not so fast!
+Police: Hey! It's our chief-in-command!
+Police Commando: I can see that you're doing pretty well and all that.
+Police: Exactly! He is probably ready to step out and do some job!
+Police Commando: Although, I have one important tip for you, kid.
+Police Commando: Don't forget to talk to people when their Quest Indicator is Green.
+Police Commando: That way, you can progress and unlock other places in this world.
+Police Commando: And remember to not just spread cleanliness...
+Police Commando: But also, spread GENEROSITY!
+
+Press ESC to open the Main Menu and get out there!
+
+do PlayerConditionals.get_out_of_tutorial = true
+do PlayerConditionals.is_dialogue = false
+=> END
+
+~ interact
+Police: Fine... You can go now.
+Police: :<
+do PlayerConditionals.is_dialogue = false
+=> END

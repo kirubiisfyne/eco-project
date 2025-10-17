@@ -1,0 +1,27 @@
+~ quest_available
+Gardener Ryan: Hey there, youngster!
+Gardener Ryan: What is your name?
+- {{PlayerConditionals.player_name}}!
+Gardener Ryan: Oooh! Nice name!
+Gardener Ryan: Say, I'm doing this bit of planting and all..
+Gardener Ryan: And it seems like there are trashes in this area where I always plant at!
+Gardener Ryan: Would you please help me pick these trash up? And also, would you gladly help me with plantin?
+- Sure!
+- I'm on it!
+Gardener Ryan: Great! Great! Take your time, then!
+do PlayerConditionals.is_dialogue = false
+set Quests.open_mis_map_2(1)
+set Quests.set_gardener_ryan(2)
+=> END
+
+~ quest_done
+Gardener Ryan: Oooh! Good looking hard work you have in there!
+Gardener Ryan: Say, what are you doing this for?
+- Doing this for the betterment of the world!
+- Doing this for the betterment of the humanity!
+Gardener Ryan: Wow! I like your determination!
+Gardener Ryan: May you continue having that attitude!
+do PlayerConditionals.is_dialogue = false
+do PlayerConditionals.map2_score += 1
+set Quests.remove_objective("Gardener Ryan")
+=> END

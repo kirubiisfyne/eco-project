@@ -1,0 +1,71 @@
+[gd_scene load_steps=7 format=3 uid="uid://caxxi8df6b1sv"]
+
+[ext_resource type="Texture2D" uid="uid://bhqrfw3sw8wg7" path="res://assets/objects/trashbag_sprite_sc.png" id="1_grqmk"]
+[ext_resource type="Script" uid="uid://dcw5x2gqfsljs" path="res://source/UI/tb_skillcheck_ui/trash_body_skillcheck_ui.gd" id="1_lx2lk"]
+[ext_resource type="Script" uid="uid://durc4e3v7lb4k" path="res://source/UI/tb_skillcheck_ui/character_body_2d.gd" id="2_wo5uh"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mt1y8"]
+size = Vector2(400, 64)
+
+[sub_resource type="BoxMesh" id="BoxMesh_qpe66"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kyahk"]
+size = Vector2(192, 40)
+
+[node name="TrashBodySkillcheck" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_lx2lk")
+
+[node name="Panel" type="Panel" parent="."]
+self_modulate = Color(1, 1, 1, 0.54902)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Trashbag" type="Area2D" parent="."]
+position = Vector2(556, 608)
+collision_layer = 64
+collision_mask = 64
+
+[node name="TrashbagSpriteSc" type="Sprite2D" parent="Trashbag"]
+texture_filter = 1
+position = Vector2(20, -224)
+scale = Vector2(4.35816, 4.35816)
+texture = ExtResource("1_grqmk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Trashbag"]
+position = Vector2(-12, -176)
+shape = SubResource("RectangleShape2D_mt1y8")
+
+[node name="Walls" type="StaticBody2D" parent="."]
+collision_layer = 64
+collision_mask = 64
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Walls"]
+polygon = PackedVector2Array(32, 24, 1152, 24, 1120, 616, 32, 616, 32, -232, -280, -128, -208, 928, 1304, 848, 1440, -184, 72, -208, 16, -168, -8, 24)
+
+[node name="SweepSweep" type="CharacterBody2D" parent="."]
+position = Vector2(464, 104)
+collision_layer = 64
+collision_mask = 64
+motion_mode = 1
+script = ExtResource("2_wo5uh")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="SweepSweep"]
+position = Vector2(0.249992, 19.75)
+scale = Vector2(192.5, 40.5)
+mesh = SubResource("BoxMesh_qpe66")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SweepSweep"]
+position = Vector2(0.5, 20)
+shape = SubResource("RectangleShape2D_kyahk")
+
+[connection signal="body_entered" from="Trashbag" to="." method="_on_trashbag_body_entered"]

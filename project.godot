@@ -1,0 +1,89 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="EcoGuardians"
+config/tags=PackedStringArray("commission")
+run/main_scene="res://source/UI/main_menu/main_menu.tscn"
+config/features=PackedStringArray("4.5", "Mobile")
+config/icon="res://icon.svg"
+
+[autoload]
+
+DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
+PlayerConditionals="*res://source/scripts/singletons/player_conditionals.gd"
+Transitions="*res://source/scripts/singletons/transitions.tscn"
+Cutscenes="*res://source/scripts/singletons/cutscenes.gd"
+Quests="*res://source/scripts/singletons/quests.gd"
+MinigameSettings="*res://source/scripts/singletons/minigame_settings.gd"
+
+[display]
+
+window/stretch/mode="viewport"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/dialogue_manager/plugin.cfg")
+
+[global_group]
+
+actors=""
+enemy="enemies for minigame"
+fighter=""
+trashes=""
+trash_body_trashes=""
+trashbody=""
+
+[input]
+
+up={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":87,"key_label":0,"unicode":119,"location":0,"echo":false,"script":null)
+]
+}
+down={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":83,"key_label":0,"unicode":115,"location":0,"echo":false,"script":null)
+]
+}
+left={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":65,"key_label":0,"unicode":97,"location":0,"echo":false,"script":null)
+]
+}
+right={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":68,"key_label":0,"unicode":100,"location":0,"echo":false,"script":null)
+]
+}
+interact={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":69,"key_label":0,"unicode":101,"location":0,"echo":false,"script":null)
+]
+}
+open_settings={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":4194305,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
+]
+}
+attack={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":75,"key_label":0,"unicode":107,"location":0,"echo":false,"script":null)
+]
+}
+
+[internationalization]
+
+locale/translations_pot_files=PackedStringArray("res://source/actors/npc/police/first_meetup.dialogue", "res://source/actors/npc/police/police.dialogue", "res://source/actors/npc/police_commando/police_commando.dialogue", "res://source/actors/player/player.dialogue", "res://source/actors/npc/old_man/old_man.dialogue", "res://source/actors/npc/kid_lary/kid_lary.dialogue", "res://source/actors/npc/environmentalist_janna/environmentalist_janna.dialogue", "res://source/actors/npc/adventurer_mic1/adventurer_michel.dialogue", "res://source/actors/npc/teenager_johnny/teenager_johnny.dialogue", "res://source/actors/inter_objects/bus/bus.dialogue", "res://source/actors/npc/map_2/gardener_ryan/gardener_ryan.dialogue", "res://source/actors/npc/map_2/goddess_bathala/goddess_bathala.dialogue", "res://source/actors/npc/map_2/economist_rebecca/economist_rebecca.dialogue", "res://source/actors/npc/map_2/biology_student_aki/biology_student_aki.dialogue", "res://source/actors/npc/1_minigame/goddess_bathala/mg_goddess_bathala.dialogue", "res://source/actors/npc/map_2/wandering_child_ryan/wandering_child_ryan.dialogue", "res://source/objects/trash_bin/trash_bin.dialogue", "res://source/actors/npc/map_3/brenston_the_tourist/brenston_the_tourist.dialogue", "res://source/actors/npc/map_3/gamel_the_dragon_brothers/gamel_the_dragon_brothers.dialogue", "res://source/actors/npc/map_3/jacksie_the_aqua_student/jacksie_the_aqua_student.dialogue", "res://source/actors/npc/map_3/jerico_the_life_guard/jerico_the_life_guard.dialogue", "res://source/actors/npc/map_3/zybie_the_dragon_brothers/zybie_the_dragon_brothers.dialogue")
+
+[rendering]
+
+renderer/rendering_method="mobile"

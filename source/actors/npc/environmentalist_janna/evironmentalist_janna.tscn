@@ -1,0 +1,102 @@
+[gd_scene load_steps=10 format=3 uid="uid://3dxacguwwact"]
+
+[ext_resource type="Texture2D" uid="uid://d1stu2rj3vroe" path="res://assets/tileset/actors/npc/Environmentalist Janna.png" id="1_iryr6"]
+[ext_resource type="Script" uid="uid://bsn0uri35o8f0" path="res://source/actors/npc/environmentalist_janna/evironmentalist_janna.gd" id="1_vce4g"]
+[ext_resource type="Script" uid="uid://c2s4n0nx1kmeo" path="res://source/actors/npc/environmentalist_janna/quest_manager.gd" id="2_kgw4i"]
+[ext_resource type="Texture2D" uid="uid://0nerba80ci3" path="res://assets/tileset/UI_set/mga_smiley_face.png" id="2_lbget"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_8pnhu"]
+radius = 8.0
+
+[sub_resource type="Animation" id="Animation_3x6d5"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame_coords")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [Vector2i(18, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_sp3jk"]
+resource_name = "idle"
+length = 0.75
+loop_mode = 1
+step = 0.15
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame_coords")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.15, 0.3, 0.45, 0.6, 0.75),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [Vector2i(18, 1), Vector2i(19, 1), Vector2i(20, 1), Vector2i(21, 1), Vector2i(22, 1), Vector2i(23, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_5reoq"]
+resource_name = "look_back"
+length = 0.75
+step = 0.15
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame_coords")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.15, 0.3, 0.45, 0.6, 0.75),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [Vector2i(6, 1), Vector2i(7, 1), Vector2i(8, 1), Vector2i(9, 1), Vector2i(10, 1), Vector2i(11, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ikpbj"]
+_data = {
+&"RESET": SubResource("Animation_3x6d5"),
+&"idle": SubResource("Animation_sp3jk"),
+&"look_back": SubResource("Animation_5reoq")
+}
+
+[node name="evironmentalist_janna" type="StaticBody2D"]
+script = ExtResource("1_vce4g")
+
+[node name="quest_manager" type="Node" parent="." node_paths=PackedStringArray("quest_master")]
+script = ExtResource("2_kgw4i")
+quest_master = NodePath("..")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+y_sort_enabled = true
+texture_filter = 1
+position = Vector2(8, 0)
+texture = ExtResource("1_iryr6")
+hframes = 56
+vframes = 20
+frame = 74
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+z_index = 1
+texture_filter = 1
+position = Vector2(0, -24)
+texture = ExtResource("2_lbget")
+offset = Vector2(8, 8)
+hframes = 8
+vframes = 5
+frame = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(8, 7)
+shape = SubResource("CircleShape2D_8pnhu")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_ikpbj")
+}
+autoplay = "idle"

@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_13"
+type="Resource"
+uid="uid://c757jhyrdievw"
+path="res://.godot/imported/first_meetup.dialogue-73893f6f8e92336baa00de6f47196601.tres"
+
+[deps]
+
+source_file="res://source/actors/npc/police/first_meetup.dialogue"
+dest_files=["res://.godot/imported/first_meetup.dialogue-73893f6f8e92336baa00de6f47196601.tres"]
+
+[params]
+
+defaults=true

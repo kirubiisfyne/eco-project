@@ -1,0 +1,27 @@
+~ quest_available
+Environmentalist Janna: Hey there! You are {{PlayerConditionals.player_name}}, right?
+Environmentalist Janna: You one of those that wants to help for the better of the World?
+- Yes, of course!
+Environmentalist Janna: That's great! The Policeman told me a lot about you!
+Environmentalist Janna: Well, I was on my way to clean the roads anyway. But, you can lend a hand!
+Environmentalist Janna: Would you kindly clean these up for me?
+- Exactly the reason I'm here!
+Environmentalist Janna: That's good to hear, then!
+Environmentalist Janna: Don't worry! Car's don't pass here that much!
+do PlayerConditionals.is_dialogue = false
+set Quests.open_mis_old_man(3)
+set Quests.set_evironmentalist_janna(2)
+=> END
+
+~ quest_done
+Environmentalist Janna: Wow! You did good!
+Environmentalist Janna: Is this your first time?
+- Just born to be great!
+- Yep! And I know I can do it better!
+Environmentalist Janna: Wow! Love the confidence in you!
+Environmentalist Janna: Well then, I'd like to thank you again!
+Environmentalist Janna: Please keep doing good to this world!
+do PlayerConditionals.is_dialogue = false
+set Quests.remove_objective("Environmentalist Janna")
+do PlayerConditionals.map1_score += 1
+=> END

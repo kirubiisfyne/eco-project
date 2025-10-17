@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://c16vhnuwwrp14"]
+
+[ext_resource type="Script" uid="uid://bia3cl1tyf212" path="res://source/actors/inter_objects/bus_3/bus_3.gd" id="1_1sv4a"]
+[ext_resource type="Texture2D" uid="uid://cvqidfy0oixcy" path="res://assets/tileset/ME_Singles_Vehicles_16x16_Bus_Left_1.png" id="2_lgspn"]
+[ext_resource type="Texture2D" uid="uid://0nerba80ci3" path="res://assets/tileset/UI_set/mga_smiley_face.png" id="3_fjroc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gv1tg"]
+size = Vector2(106, 32)
+
+[node name="bus2" type="StaticBody2D"]
+script = ExtResource("1_1sv4a")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+y_sort_enabled = true
+texture_filter = 1
+position = Vector2(56, -16)
+texture = ExtResource("2_lgspn")
+flip_h = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(59, -16)
+shape = SubResource("RectangleShape2D_gv1tg")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+z_index = 1
+texture_filter = 1
+position = Vector2(48, -64)
+texture = ExtResource("3_fjroc")
+offset = Vector2(8, 8)
+hframes = 8
+vframes = 5
+frame = 3

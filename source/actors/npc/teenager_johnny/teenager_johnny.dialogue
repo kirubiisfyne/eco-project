@@ -1,0 +1,20 @@
+~ quest_available
+Teenager Johnny: Sir! Sir! Sir!
+- Yeah, what is it?
+Teenager Johnny: There's a lot of plastic bags in these area! Other people just kept throwing them away!
+Teenager Johnny: Please use all the tools you have to clean them!
+- I'm on it!
+Teenager Johnny: Thank you, Sir!
+do PlayerConditionals.is_dialogue = false
+set Quests.open_mis_old_man(5)
+set Quests.set_teenager_johnny(2)
+=> END
+
+~ quest_done
+Teenager Johnny: Wowiee!
+Teenager Johnny: The sidewalk looks just like new!
+Teenager Johnny: Don't worry, Sir! Next time, I will follow your footsteps!
+do PlayerConditionals.is_dialogue = false
+set Quests.remove_objective("Teenager Johnny")
+do PlayerConditionals.map1_score += 1
+=> END

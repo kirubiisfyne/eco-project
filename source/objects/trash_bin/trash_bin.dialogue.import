@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_13"
+type="Resource"
+uid="uid://bwv0la0tekg2o"
+path="res://.godot/imported/trash_bin.dialogue-c6d219962d69bdd1bb8dca44dbf1cda1.tres"
+
+[deps]
+
+source_file="res://source/objects/trash_bin/trash_bin.dialogue"
+dest_files=["res://.godot/imported/trash_bin.dialogue-c6d219962d69bdd1bb8dca44dbf1cda1.tres"]
+
+[params]
+
+defaults=true

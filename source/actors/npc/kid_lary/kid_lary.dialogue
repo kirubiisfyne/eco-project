@@ -1,0 +1,37 @@
+~ quest_available
+Kid Lary: Hey there, Mister!
+Kid Lary: What are you doing here?
+- I am here for Community Service!
+Kid Lary: Are you the ones w-who... Clean bags??
+Kid Lary: Dad told me about you! He said that you keep the... um.?
+- World Clean?
+	Kid Lary: Yeah!
+- Everyone Healthy?
+	Kid Lary: Noooo!
+	Kid Lary: I think it's like... w-w-
+	Kid Lary: World Clean!
+Kid Lary: You keep the world clean!
+Kid Lary: Anyway, there are black bags here in our playground :<
+Kid Lary: It bothers us on our playing! They kept being on the way!
+Kid Lary: Can you clean them up for me, Mister?
+- That's the reason I am here!
+Kid Lary: Yehey!
+do PlayerConditionals.is_dialogue = false
+set Quests.open_mis_old_man(2)
+set Quests.set_kid_lary(2)
+=> END
+
+
+
+~ quest_done
+Kid Lary: Wow! You're doing good a lot, Mister!
+- That's what I do best!
+Kid Lary: Now we can play on the playground again!
+Kid Lary: Dad's right! You're like umm...
+Kid Lary: A hero!
+Kid Lary: Someday, I'm gonna be like you!
+do PlayerConditionals.is_dialogue = false
+do PlayerConditionals.score = 0
+set Quests.remove_objective("Kid Lary")
+do PlayerConditionals.map1_score += 1
+=> END

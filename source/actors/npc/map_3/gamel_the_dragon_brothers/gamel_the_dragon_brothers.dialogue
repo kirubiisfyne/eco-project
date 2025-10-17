@@ -1,0 +1,29 @@
+~ quest_available
+Gamel the Dragon Brother: Psst! Hey, you there! Have you seen a kid in a dragon hat like mine? That’s my big bro, Zybie!
+- Can’t say I have…
+- What happened to him?
+Gamel the Dragon Brother: He was right here, roaring and jumping like a real dragon! But then—poof!—he vanished behind all this yucky trash...
+Gamel the Dragon Brother: I think... if we clean this place up, he might come out again! Maybe he's hiding from the mess!
+Gamel the Dragon Brother: Will you help me clean? For Zybie?
+- You bet, little dragon!
+- Let’s find your brother together!
+Gamel the Dragon Brother: Yesss! You’re the best! Zybie’s gonna be so happy when he sees this place shine!
+do PlayerConditionals.is_dialogue = false
+set Quests.open_mis_map_3(2)
+set Quests.set_gamel_the_dragon_brothers(2)
+=> END
+
+
+~ quest_done
+Gamel the Dragon Brother: Whoa… the water’s all sparkly now! It’s like a shiny mirror for the sky!
+- We really cleaned it up, huh?
+- Glad you like it, Gamel!
+Gamel the Dragon Brother: I do! It’s super awesome! If Zybie sees this, he’s gonna do his happy dragon dance for sure!
+Gamel the Dragon Brother: Oh! If you see him before I do, can you tell him something?
+- Sure, what is it?
+- Of course, little dragon!
+Gamel the Dragon Brother: Tell Zybie to meet me at Dad’s camping spot, by the tall tree with the funny face bark! He’ll know the one!
+Gamel the Dragon Brother: Thanks a bunch! You’re like… the hero of the dragons now!
+do PlayerConditionals.is_dialogue = false
+do PlayerConditionals.map3_score += 1
+=> END

@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_13"
+type="Resource"
+uid="uid://de1clea37j8ox"
+path="res://.godot/imported/biology_student_aki.dialogue-4d6362cf0cc845cf5411bb3f09089905.tres"
+
+[deps]
+
+source_file="res://source/actors/npc/map_2/biology_student_aki/biology_student_aki.dialogue"
+dest_files=["res://.godot/imported/biology_student_aki.dialogue-4d6362cf0cc845cf5411bb3f09089905.tres"]
+
+[params]
+
+defaults=true

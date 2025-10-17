@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_13"
+type="Resource"
+uid="uid://chd84inantwn4"
+path="res://.godot/imported/brenston_the_tourist.dialogue-a24e65bf7109adae6bbb727481c2f75b.tres"
+
+[deps]
+
+source_file="res://source/actors/npc/map_3/brenston_the_tourist/brenston_the_tourist.dialogue"
+dest_files=["res://.godot/imported/brenston_the_tourist.dialogue-a24e65bf7109adae6bbb727481c2f75b.tres"]
+
+[params]
+
+defaults=true

@@ -1,0 +1,82 @@
+[gd_scene load_steps=7 format=3 uid="uid://da5tm51oamvl4"]
+
+[ext_resource type="Texture2D" uid="uid://cift8ggeimqxr" path="res://assets/objects/trashcan.png" id="1_rhxpk"]
+[ext_resource type="Script" uid="uid://hlb16miq2yaa" path="res://source/UI/segregation_ui/segregation.gd" id="1_y6ack"]
+[ext_resource type="AudioStream" uid="uid://ci7tsol3r0pvj" path="res://assets/audios/sfx/Metal Trash Can Filled Sound Effect(1).mp3" id="3_7rfms"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jkcku"]
+size = Vector2(201, 47)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_q6w54"]
+size = Vector2(222, 43)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_a7xhv"]
+size = Vector2(226, 39)
+
+[node name="Segregation" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_y6ack")
+x_range = Vector2(235, 1095)
+y_range = Vector2(50, 160)
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.187, 0.187, 0.187, 0.232)
+
+[node name="TextureRect" type="TextureRect" parent="."]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_rhxpk")
+
+[node name="NabubulokArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NabubulokArea"]
+position = Vector2(360, 291)
+shape = SubResource("RectangleShape2D_jkcku")
+debug_color = Color(0.856301, 0.346845, 0.318967, 0.42)
+
+[node name="DiNabubulok" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DiNabubulok"]
+position = Vector2(672, 291)
+shape = SubResource("RectangleShape2D_q6w54")
+
+[node name="Nareresiklo" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Nareresiklo"]
+position = Vector2(982, 291)
+shape = SubResource("RectangleShape2D_a7xhv")
+debug_color = Color(0.290819, 0.624594, 0.236061, 0.42)
+
+[node name="ExitTrashBin" type="Button" parent="."]
+layout_mode = 0
+offset_left = 52.0
+offset_top = 125.0
+offset_right = 166.0
+offset_bottom = 156.0
+text = "Exit Trash Bin"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_7rfms")
+bus = &"Sfx"
+
+[connection signal="area_entered" from="NabubulokArea" to="." method="_on_nabubulok_area_entered"]
+[connection signal="area_entered" from="DiNabubulok" to="." method="_on_di_nabubulok_area_entered"]
+[connection signal="area_entered" from="Nareresiklo" to="." method="_on_nareresiklo_area_entered"]
+[connection signal="button_up" from="ExitTrashBin" to="." method="_on_exit_trash_bin_button_up"]

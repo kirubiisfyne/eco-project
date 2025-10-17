@@ -1,0 +1,6 @@
+~ not_finished
+Nope! You haven't got the other trashes yet!
+Try talking to the people and help them clean these trashes! Then, come back here after you finish!
+- Okay...
+do PlayerConditionals.is_dialogue = false
+=> END

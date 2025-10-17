@@ -1,0 +1,11 @@
+~ interact
+Police Commando: Good luck out there, kid!
+- I.. I don't know how.
+	Police Commando: Like... How to 'get out there'?
+	Police Commando: Well, you just press ESC!
+- Sir! Yes, Sir!
+	Police Commando: Great!
+
+Press ESC to open the Main Menu and get out there!
+do PlayerConditionals.is_dialogue = false
+=> END

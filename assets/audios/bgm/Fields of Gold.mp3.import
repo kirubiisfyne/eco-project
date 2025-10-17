@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dgnu71kn6nfl6"
+path="res://.godot/imported/Fields of Gold.mp3-24ae0a2a6ec6c3a71779ed01f3219e2e.mp3str"
+
+[deps]
+
+source_file="res://assets/audios/bgm/Fields of Gold.mp3"
+dest_files=["res://.godot/imported/Fields of Gold.mp3-24ae0a2a6ec6c3a71779ed01f3219e2e.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

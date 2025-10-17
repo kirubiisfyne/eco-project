@@ -1,0 +1,26 @@
+~ quest_available
+Goddess Bathala: Greetings to thee, human.
+- Good day, Bathala!
+Goddess Bathala: Good day. The Goddess love thou manners!
+Goddess Bathala: Well, You're just in time. Thy forest requires more trees as some humans more evil than thee has cut them mercilessly.
+Goddess Bathala: We need more trees, Human. Can you plant them for me?
+- Of course, Bathala!
+- Watch me do it quick!
+Goddess Bathala: Good human.
+Goddess Bathala: I'll be waiting for you, then.
+do PlayerConditionals.is_dialogue = false
+set Quests.open_mis_map_2(2)
+set Quests.set_goddess_bathala(2)
+=> END
+
+~ quest_done
+Goddess Bathala: Oh my, oh my!
+Goddess Bathala: You've done a really great job there!
+Goddess Bathala: Seems like you already have a background with farming, have you?
+- Nope! Just determined to clean the world!
+- Yep! And planning to use this for greater good!
+Goddess Bathala: Wow! Very well!
+Goddess Bathala: Shall I give thy gifts in the future, as thou show their determination in taking care of Mother's Land!
+do PlayerConditionals.is_dialogue = false
+do PlayerConditionals.map2_score += 1
+=> END

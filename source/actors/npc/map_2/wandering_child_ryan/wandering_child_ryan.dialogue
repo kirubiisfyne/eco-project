@@ -1,0 +1,19 @@
+~ quest_available
+Wandering Child Ryan: Hello!
+Wandering Child Ryan: My mommy said that I should go here and plant trees in her pot because my friends dared me to slash a tree truck...
+Wandering Child Ryan: My mommy didn't like that, so I am planting here!
+Wandering Child Ryan: Would you help me?
+- Sure!
+Wandering Child Ryan: Okay!
+Wandering Child Ryan: Can you do the rest for me?
+do PlayerConditionals.is_dialogue = false
+set Quests.open_mis_map_2(5)
+set Quests.set_wandering_child_ryan(2)
+
+~ quest_done
+Wandering Child Ryan: Wow! These are even better than mine!
+Wandering Child Ryan: Thank you for the wonderful work, Volunteer!
+- No worries!
+do PlayerConditionals.is_dialogue = false
+do PlayerConditionals.map2_score += 1
+=> END

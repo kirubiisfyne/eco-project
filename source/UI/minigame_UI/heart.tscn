@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://bk3fwqg1r0be2"]
+
+[ext_resource type="Texture2D" uid="uid://bmfhjke4mtc8i" path="res://assets/UI/Modern_UI_Style_2.png" id="1_bwpd5"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ht5n8"]
+atlas = ExtResource("1_bwpd5")
+region = Rect2(216, 160, 16, 15)
+
+[node name="heart" type="TextureRect"]
+texture_filter = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1.0
+offset_right = -1135.0
+offset_bottom = -633.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(5, 5)
+texture = SubResource("AtlasTexture_ht5n8")
+stretch_mode = 4

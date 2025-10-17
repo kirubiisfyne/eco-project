@@ -1,0 +1,83 @@
+[gd_scene load_steps=9 format=3 uid="uid://cqdvufcjunpk2"]
+
+[ext_resource type="Script" uid="uid://cho0e7jmi5lwc" path="res://source/actors/enemies/train_enemy/train_enemy.gd" id="1_wf7fj"]
+[ext_resource type="Script" uid="uid://s11lqklho0dt" path="res://source/scripts/classes/health_man.gd" id="2_awdpy"]
+[ext_resource type="Texture2D" uid="uid://d3dkq1dk3ftxj" path="res://icon.svg" id="2_lp3vj"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gnmx7"]
+size = Vector2(32, 32)
+
+[sub_resource type="Animation" id="Animation_yxu7a"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Icon:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(100, 100, 100, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_g6nrn"]
+resource_name = "damaged"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Icon:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0666667, 0.133333, 0.266667, 0.366667, 0.433333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(100, 100, 100, 1), Color(1, 1, 1, 1), Color(100, 100, 100, 1), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_m2pp3"]
+resource_name = "idle"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Icon:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_kuwa1"]
+_data = {
+&"RESET": SubResource("Animation_yxu7a"),
+&"damaged": SubResource("Animation_g6nrn"),
+&"idle": SubResource("Animation_m2pp3")
+}
+
+[node name="train_enemy" type="CharacterBody2D" node_paths=PackedStringArray("health_manager") groups=["enemy"]]
+script = ExtResource("1_wf7fj")
+health_manager = NodePath("HealthManager")
+
+[node name="HealthManager" type="Node" parent="."]
+script = ExtResource("2_awdpy")
+
+[node name="Icon" type="Sprite2D" parent="."]
+modulate = Color(100, 100, 100, 1)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("2_lp3vj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_gnmx7")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_kuwa1")
+}
+autoplay = "idle"

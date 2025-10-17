@@ -1,0 +1,26 @@
+~ quest_available
+Economist Rebecca: Huff... Huff...
+Economist Rebecca: I'm too tired at work!
+Economist Rebecca: Do you know that this forest is my only break?
+Economist Rebecca: This forest is just too calming to that I feel comfortable in it!
+Economist Rebecca: But... These days, there were just a lot of bad guys that kept putting their trashbags anywhere in any places!
+Economist Rebecca: You're a volunteer, right?
+- That's right!
+Economist Rebecca: Great!
+Economist Rebecca: Welp, this whole forest is yours t
+do PlayerConditionals.is_dialogue = false
+set Quests.open_mis_map_2(3)
+set Quests.set_economist_rebecca(2)
+=> END
+
+~ quest_done
+Economist Rebecca: Wowie! This whole place is clean!
+Economist Rebecca: I feel like I can breath fresh again!
+Economist Rebecca: May I know your name?
+- {{PlayerConditionals.player_name}}!
+Economist Rebecca: Thank you, {{PlayerConditionals.player_name}}!
+Economist Rebecca: Hope we meet again soon! Please clean more places!
+do PlayerConditionals.is_dialogue = false
+set Quests.remove_objective("Economist Rebecca")
+do PlayerConditionals.map2_score += 1
+=> END

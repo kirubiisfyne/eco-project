@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_13"
+type="Resource"
+uid="uid://lsrp04mo08wt"
+path="res://.godot/imported/wandering_child_ryan.dialogue-539f839b81bf8f152dd557183e9e3e81.tres"
+
+[deps]
+
+source_file="res://source/actors/npc/map_2/wandering_child_ryan/wandering_child_ryan.dialogue"
+dest_files=["res://.godot/imported/wandering_child_ryan.dialogue-539f839b81bf8f152dd557183e9e3e81.tres"]
+
+[params]
+
+defaults=true

@@ -1,0 +1,30 @@
+[gd_scene load_steps=2 format=3 uid="uid://bx3n8lcj8njqn"]
+
+[ext_resource type="Script" uid="uid://cri36unvfop17" path="res://source/UI/player_UI/player_ui.gd" id="1_kxk6j"]
+
+[node name="player_ui" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_kxk6j")
+
+[node name="mini_map" type="SubViewportContainer" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -80.0
+offset_top = 16.0
+offset_right = -30.0
+offset_bottom = 66.0
+grow_horizontal = 0
+mouse_filter = 2
+
+[node name="SubViewport" type="SubViewport" parent="mini_map"]
+handle_input_locally = false
+size = Vector2i(120, 72)
+render_target_update_mode = 4

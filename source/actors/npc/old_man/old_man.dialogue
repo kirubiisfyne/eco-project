@@ -1,0 +1,30 @@
+~ quest_available_1
+Old Man Andrew: Hey there, young lad.
+- How're you?
+- So, you're the old man!
+	Old Man: Hey, I'm not that old!
+Old Man Andrew: Well, I'm having a trash problem 'round my property. Random kids kept throwing stuff away.
+Old Man Andrew: I mean, I don't want to scare them but, I wish someo1ne could just clean these all up for me.
+Old Man Andrew: Can you do that?
+- Well, that's why I am here!
+Old Man Andrew: Great! Great! Alright, please start now.
+do PlayerConditionals.is_dialogue = false
+set Quests.set_old_man(2)
+set Quests.open_mis_old_man(1)
+=> END
+
+~ quest_done_1
+Old Man Andrew: Jolly! Jolly!
+Old Man Andrew: You're doing great!
+Old Man Andrew: I didn't believe it! My lawn is already clean!
+Old Man Andrew: Say, where did you come from?
+- I was just raised to be a natural!
+- Just here for volunteer work!.
+Old Man Andrew: I knew it!
+Old Man Andrew: Of course you woud be!
+Old Man Andrew: Anyways, Thank you! Come again and we'll join a coffee together
+do PlayerConditionals.is_dialogue = false
+do PlayerConditionals.score -= 5
+set Quests.remove_objective("Old Man Andrew")
+do PlayerConditionals.map1_score += 1
+=> END

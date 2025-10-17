@@ -1,0 +1,23 @@
+~ quest_available
+Adventurer Michel: Ohh! Hey there, fine lad!
+Adventurer Michel: What are you doing wandering here in our troop?
+- I am here to clean your 'troop'!
+- Well, ready to do my job!
+Adventurer Michel: Delightful!
+Adventurer Michel: Well, please do so! Feel free to clean anything you need!
+do PlayerConditionals.is_dialogue = false
+set Quests.open_mis_old_man(4)
+set Quests.set_adventurer_michel(2)
+=> END
+
+~ quest_done
+Adventurer Michel: Mmm!
+- Well, what do you think?
+Adventurer Michel: It's very shiny!
+Adventurer Michel: Very mindful!
+Adventurer Michel: Very Demure!
+Adventurer Michel: I like your job, fine young man! Keep doing your best at it!
+do PlayerConditionals.is_dialogue = false
+set Quests.remove_objective("Adventurer Michel")
+do PlayerConditionals.map1_score += 1
+=> END

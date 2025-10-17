@@ -1,0 +1,30 @@
+~ quest_available
+Brenston The Tourist: Ahoy there, friend! Isn’t the sea just gorgeous today?
+- It really is!
+Brenston The Tourist: Aye, the breeze, the gulls, the scent of salt in the air—makes a man feel alive, I tell ya!
+Brenston The Tourist: But… sigh… what a shame to see all this rubbish floating in the waves. Bottles, bags… it's enough to make the heart weep.
+Brenston The Tourist: I came for a joyful swim and instead I’m fishing out plastic more than fish!
+Brenston The Tourist: Say, would you help an old tourist clean up this lovely shore?
+- Absolutely, Brenston. Let’s do it!
+- That's why I am here!
+Brenston The Tourist: Hah! That’s the spirit I hoped for. You’ve got salt in your soul, friend!
+do PlayerConditionals.is_dialogue = false
+set Quests.open_mis_map_3(1)
+set Quests.set_brenston_the_tourist(2)
+=> END
+
+
+
+~ quest_done
+Brenston the Tourist: Well now—would you look at that! The shore’s never looked finer!
+- Glad I could help, Brenston.
+- It does look amazing now!
+Brenston the Tourist: Aye, it truly warms the heart. The waves are clearer, the breeze is sweeter… even the gulls seem to be singing a happier tune!
+Brenston the Tourist: You’ve done more than clean this beach, friend—you’ve restored a bit of magic to the sea.
+Brenston the Tourist: From the bottom of this old sailor’s heart, thank you.
+- Anytime, Brenston.
+- Let’s keep it clean together!
+Brenston the Tourist: Aye! With folks like you around, the ocean’s in good hands.
+do PlayerConditionals.is_dialogue = false
+do PlayerConditionals.map3_score += 1
+=> END

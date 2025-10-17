@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_13"
+type="Resource"
+uid="uid://bknl3l2oeuec7"
+path="res://.godot/imported/teenager_johnny.dialogue-e9b27c8de7ffe471154f12a68af4bc8a.tres"
+
+[deps]
+
+source_file="res://source/actors/npc/teenager_johnny/teenager_johnny.dialogue"
+dest_files=["res://.godot/imported/teenager_johnny.dialogue-e9b27c8de7ffe471154f12a68af4bc8a.tres"]
+
+[params]
+
+defaults=true

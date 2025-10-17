@@ -1,0 +1,31 @@
+~ quest_available
+Zybie the Dragon Brother: sniff H-Hey… have you seen a little kid with a dragon hat like mine?
+- You mean Gamel?
+- Are you okay?
+Zybie the Dragon Brother: That’s my little brother! He was just here… but then all this trash came in and I—I can’t see him anymore!
+Zybie the Dragon Brother: I think… I think he’s on the other side. I called out, but he didn’t answer. What if he’s stuck? What if he’s scared?
+Zybie the Dragon Brother: Please… can you help me clean this up? I need to find him… I promised I’d always protect him…
+- I’ll help you, Zybie.
+- Let’s get to work and find him.
+Zybie the Dragon Brother: Th-thank you… I just wanna see him again… tell him I’m here…
+do PlayerConditionals.is_dialogue = false
+set Quests.open_mis_map_3(5)
+set Quests.set_jerico_the_life_guard(2)
+=> END
+
+
+~ quest_done
+Zybie the Dragon Brother: sniff... Wait... is it really...?
+- What is it, Zybie?
+- What’s wrong?
+Zybie the Dragon Brother: The shore… it’s actually clean! I can see the water again! It’s like a dragon's den, all sparkly and clear! sniffle I can finally breathe easy…
+Zybie the Dragon Brother: But, I still haven’t found Gamel. sigh I’m worried... what if he’s still out there lost?
+Zybie the Dragon Brother: If you see him, can you tell him to meet me at Dad’s camp? The one by the big stone with the moss growing on it. I think... I think I’ll be there waiting for him.
+Zybie the Dragon Brother: I just want to make sure he’s okay. You know, just in case he’s still looking for me.
+- Of course, Zybie. I’ll make sure he gets the message.
+- I’ll find Gamel for you, don’t worry.
+Zybie the Dragon Brother: Thank you... I’ll be waiting. You’re the best for helping us. I don’t know what we’d do without you.
+do PlayerConditionals.is_dialogue = false
+do PlayerConditionals.map3_score += 1
+=> END
+

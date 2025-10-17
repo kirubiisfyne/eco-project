@@ -1,0 +1,29 @@
+~ quest_available
+Jacksie the Aqua Student: No, no, no… this can’t be right! This was supposed to be a clean site for my thesis!
+- What happened here?
+- Are you okay?
+Jacksie the Aqua Student: I came all the way from Aqua Academy to study marine microcurrents… but how can I study anything when the shore’s drowning in garbage?!
+Jacksie the Aqua Student: Bottles, wrappers, plastic rings—this isn't just pollution, it's a disaster! My data’s ruined, the fish are gone...
+Jacksie the Aqua Student: Please… can you help me clean this place? If we don’t, I won’t just fail my project—the whole ecosystem will suffer.
+- I’ll help you, Jackie.
+- Let’s fix this together.
+Jacksie the Aqua Student: Thank you! I knew someone would care. Let’s bring this shore back to life—one piece of trash at a time.
+do PlayerConditionals.is_dialogue = false
+set Quests.open_mis_map_3(3)
+set Quests.set_jacksie_the_aqua_student(2)
+=> END
+
+
+~ quest_done
+Jacksie the Aqua Student: Incredible… absolutely incredible! The shoreline’s pristine—it’s like looking at a page from my textbook!
+- We did it, Jacksie.
+- Looks a lot better now, huh?
+Jacksie the Aqua Student: Better? It’s perfect! The clarity of the water, the return of the little fish... even the tide patterns are readable again!
+Jacksie the Aqua Student: You didn’t just help my research—you gave this shore a second chance.
+Jacksie the Aqua Student: Thank you, truly. Aqua Academy’s going to hear about this. You’re not just a helper… you’re a scientific hero!
+- Happy to help, Jacksie.
+- Let’s keep it that way.
+Jacksie the Aqua Student: With people like you around, the ocean’s future just got a little brighter.
+do PlayerConditionals.is_dialogue = false
+do PlayerConditionals.map3_score += 1
+=> END
