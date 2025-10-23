@@ -9,15 +9,15 @@
 [ext_resource type="PackedScene" uid="uid://dy8v87qarfpsa" path="res://source/UI/paused_menu/pause_menu.tscn" id="5_1wwvr"]
 [ext_resource type="Texture2D" uid="uid://bc04ratc3kyrg" path="res://assets/tileset/11_Camping_16x16.png" id="5_f1wmb"]
 [ext_resource type="AudioStream" uid="uid://drg0b2on4u2m1" path="res://assets/audios/sfx/car_start_then_goes.mp3" id="6_v6si1"]
-[ext_resource type="PackedScene" uid="uid://dy8u048jg3e8" path="res://source/actors/npc/old_man/old_man.tscn" id="7_ot4sh"]
+[ext_resource type="PackedScene" uid="uid://dy8u048jg3e8" path="res://source/actors/npc/map1_npcs/old_man/old_man.tscn" id="7_ot4sh"]
 [ext_resource type="Script" uid="uid://q3hegop3mjm6" path="res://source/maps/map1/cutscene_manager.gd" id="8_lv3v3"]
 [ext_resource type="PackedScene" uid="uid://ddmi7pevk31sj" path="res://source/actors/player/npc_compass/npc_compass.tscn" id="9_l8hi7"]
-[ext_resource type="PackedScene" uid="uid://cvb3pqqncw67v" path="res://source/actors/npc/kid_lary/kid_lary.tscn" id="9_ugotv"]
+[ext_resource type="PackedScene" uid="uid://cvb3pqqncw67v" path="res://source/actors/npc/map1_npcs/kid_lary/kid_lary.tscn" id="9_ugotv"]
 [ext_resource type="PackedScene" uid="uid://c8f6rlpykl0g0" path="res://source/objects/trash/trash.tscn" id="9_v2cfe"]
 [ext_resource type="AudioStream" uid="uid://b5x2w4qgfs56" path="res://assets/audios/bgm/Campfire Tales.mp3" id="9_y3lc4"]
-[ext_resource type="PackedScene" uid="uid://3dxacguwwact" path="res://source/actors/npc/environmentalist_janna/evironmentalist_janna.tscn" id="11_83xqc"]
-[ext_resource type="PackedScene" uid="uid://bqqns72eqta0r" path="res://source/actors/npc/adventurer_mic1/adventurer_michel_1.tscn" id="12_ph8q4"]
-[ext_resource type="PackedScene" uid="uid://b51sngcpu4mcb" path="res://source/actors/npc/teenager_johnny/teenager_johnny.tscn" id="13_b6slp"]
+[ext_resource type="PackedScene" uid="uid://3dxacguwwact" path="res://source/actors/npc/map1_npcs/environmentalist_janna/evironmentalist_janna.tscn" id="11_83xqc"]
+[ext_resource type="PackedScene" uid="uid://bqqns72eqta0r" path="res://source/actors/npc/map1_npcs/adventurer_michel/adventurer_michel_1.tscn" id="12_ph8q4"]
+[ext_resource type="PackedScene" uid="uid://b51sngcpu4mcb" path="res://source/actors/npc/map1_npcs/teenager_johnny/teenager_johnny.tscn" id="13_b6slp"]
 [ext_resource type="PackedScene" uid="uid://n2aqq8k1qrta" path="res://source/UI/score_UI/score_ui.tscn" id="17_iebsw"]
 [ext_resource type="PackedScene" uid="uid://cwf1yshncfaqu" path="res://source/UI/minimap_ui/minimap_ui.tscn" id="17_usu0t"]
 [ext_resource type="PackedScene" uid="uid://2jewppqwu0lu" path="res://source/actors/inter_objects/bus/bus.tscn" id="18_g658m"]
@@ -580,49 +580,51 @@ position_smoothing_speed = 2.0
 
 [node name="NPCCompass" parent="player" node_paths=PackedStringArray("target_npc") instance=ExtResource("9_l8hi7")]
 position = Vector2(8, 8)
-target_npc = NodePath("../../environmentalist_janna")
+target_npc = NodePath("../../NPCs/environmentalist_janna")
 
 [node name="NPCCompass2" parent="player" node_paths=PackedStringArray("target_npc") instance=ExtResource("9_l8hi7")]
 position = Vector2(8, 8)
-target_npc = NodePath("../../old_man_andrew")
+target_npc = NodePath("../../NPCs/old_man_andrew")
 
 [node name="NPCCompass3" parent="player" node_paths=PackedStringArray("target_npc") instance=ExtResource("9_l8hi7")]
 position = Vector2(8, 8)
-target_npc = NodePath("../../kid_lary")
+target_npc = NodePath("../../NPCs/kid_lary")
 
 [node name="NPCCompass4" parent="player" node_paths=PackedStringArray("target_npc") instance=ExtResource("9_l8hi7")]
 position = Vector2(8, 8)
-target_npc = NodePath("../../teenager_johnny")
+target_npc = NodePath("../../NPCs/teenager_johnny")
 
 [node name="NPCCompass5" parent="player" node_paths=PackedStringArray("target_npc") instance=ExtResource("9_l8hi7")]
 position = Vector2(8, 8)
-target_npc = NodePath("../../adventurer_michel")
+target_npc = NodePath("../../NPCs/adventurer_michel")
 
-[node name="old_man_andrew" parent="." node_paths=PackedStringArray("dialogue_sub") instance=ExtResource("7_ot4sh")]
+[node name="NPCs" type="Node2D" parent="."]
+
+[node name="old_man_andrew" parent="NPCs" node_paths=PackedStringArray("dialogue_sub") instance=ExtResource("7_ot4sh")]
 z_index = 1
 y_sort_enabled = true
 position = Vector2(1472, 1184)
-dialogue_sub = NodePath("../dialogue_sub")
+dialogue_sub = NodePath("../../dialogue_sub")
 
-[node name="kid_lary" parent="." node_paths=PackedStringArray("dialogue_sub") instance=ExtResource("9_ugotv")]
+[node name="kid_lary" parent="NPCs" node_paths=PackedStringArray("dialogue_sub") instance=ExtResource("9_ugotv")]
 z_index = 1
 position = Vector2(2032, 1072)
-dialogue_sub = NodePath("../dialogue_sub")
+dialogue_sub = NodePath("../../dialogue_sub")
 
-[node name="environmentalist_janna" parent="." node_paths=PackedStringArray("dialogue_sub") instance=ExtResource("11_83xqc")]
+[node name="environmentalist_janna" parent="NPCs" node_paths=PackedStringArray("dialogue_sub") instance=ExtResource("11_83xqc")]
 z_index = 1
 position = Vector2(1648, 992)
-dialogue_sub = NodePath("../dialogue_sub")
+dialogue_sub = NodePath("../../dialogue_sub")
 
-[node name="adventurer_michel" parent="." node_paths=PackedStringArray("dialogue_sub") instance=ExtResource("12_ph8q4")]
+[node name="adventurer_michel" parent="NPCs" node_paths=PackedStringArray("dialogue_sub") instance=ExtResource("12_ph8q4")]
 z_index = 1
 position = Vector2(2048, 1344)
-dialogue_sub = NodePath("../dialogue_sub")
+dialogue_sub = NodePath("../../dialogue_sub")
 
-[node name="teenager_johnny" parent="." node_paths=PackedStringArray("dialogue_sub") instance=ExtResource("13_b6slp")]
+[node name="teenager_johnny" parent="NPCs" node_paths=PackedStringArray("dialogue_sub") instance=ExtResource("13_b6slp")]
 z_index = 1
 position = Vector2(1648, 1504)
-dialogue_sub = NodePath("../dialogue_sub")
+dialogue_sub = NodePath("../../dialogue_sub")
 
 [node name="bus2" parent="." node_paths=PackedStringArray("dialogue_sub") instance=ExtResource("18_g658m")]
 z_index = 1
@@ -639,31 +641,31 @@ dialogue_sub = NodePath("../dialogue_sub")
 [node name="trash" parent="mis_1" node_paths=PackedStringArray("quest_master", "world_map") instance=ExtResource("9_v2cfe")]
 z_index = 1
 position = Vector2(1616, 1248)
-quest_master = NodePath("../../old_man_andrew")
+quest_master = NodePath("../../NPCs/old_man_andrew")
 world_map = NodePath("../..")
 
 [node name="trash2" parent="mis_1" node_paths=PackedStringArray("quest_master", "world_map") instance=ExtResource("9_v2cfe")]
 z_index = 1
 position = Vector2(1680, 1264)
-quest_master = NodePath("../../old_man_andrew")
+quest_master = NodePath("../../NPCs/old_man_andrew")
 world_map = NodePath("../..")
 
 [node name="trash3" parent="mis_1" node_paths=PackedStringArray("quest_master", "world_map") instance=ExtResource("9_v2cfe")]
 z_index = 1
 position = Vector2(1712, 1232)
-quest_master = NodePath("../../old_man_andrew")
+quest_master = NodePath("../../NPCs/old_man_andrew")
 world_map = NodePath("../..")
 
 [node name="trash4" parent="mis_1" node_paths=PackedStringArray("quest_master", "world_map") instance=ExtResource("9_v2cfe")]
 z_index = 1
 position = Vector2(1776, 1280)
-quest_master = NodePath("../../old_man_andrew")
+quest_master = NodePath("../../NPCs/old_man_andrew")
 world_map = NodePath("../..")
 
 [node name="trash5" parent="mis_1" node_paths=PackedStringArray("quest_master", "world_map") instance=ExtResource("9_v2cfe")]
 z_index = 1
 position = Vector2(1856, 1328)
-quest_master = NodePath("../../old_man_andrew")
+quest_master = NodePath("../../NPCs/old_man_andrew")
 world_map = NodePath("../..")
 
 [node name="mis_2" type="Node2D" parent="."]
@@ -671,31 +673,31 @@ world_map = NodePath("../..")
 [node name="trash6" parent="mis_2" node_paths=PackedStringArray("quest_master", "world_map") instance=ExtResource("9_v2cfe")]
 z_index = 1
 position = Vector2(1936, 1104)
-quest_master = NodePath("../../kid_lary")
+quest_master = NodePath("../../NPCs/kid_lary")
 world_map = NodePath("../..")
 
 [node name="trash7" parent="mis_2" node_paths=PackedStringArray("quest_master", "world_map") instance=ExtResource("9_v2cfe")]
 z_index = 1
 position = Vector2(2016, 1136)
-quest_master = NodePath("../../kid_lary")
+quest_master = NodePath("../../NPCs/kid_lary")
 world_map = NodePath("../..")
 
 [node name="trash8" parent="mis_2" node_paths=PackedStringArray("quest_master", "world_map") instance=ExtResource("9_v2cfe")]
 z_index = 1
 position = Vector2(2048, 1200)
-quest_master = NodePath("../../kid_lary")
+quest_master = NodePath("../../NPCs/kid_lary")
 world_map = NodePath("../..")
 
 [node name="trash9" parent="mis_2" node_paths=PackedStringArray("quest_master", "world_map") instance=ExtResource("9_v2cfe")]
 z_index = 1
 position = Vector2(2048, 1152)
-quest_master = NodePath("../../kid_lary")
+quest_master = NodePath("../../NPCs/kid_lary")
 world_map = NodePath("../..")
 
 [node name="trash10" parent="mis_2" node_paths=PackedStringArray("quest_master", "world_map") instance=ExtResource("9_v2cfe")]
 z_index = 1
 position = Vector2(2128, 1120)
-quest_master = NodePath("../../kid_lary")
+quest_master = NodePath("../../NPCs/kid_lary")
 world_map = NodePath("../..")
 
 [node name="mis_3" type="Node2D" parent="."]
@@ -703,31 +705,31 @@ world_map = NodePath("../..")
 [node name="trash11" parent="mis_3" node_paths=PackedStringArray("quest_master", "world_map") instance=ExtResource("9_v2cfe")]
 z_index = 1
 position = Vector2(1888, 912)
-quest_master = NodePath("../../environmentalist_janna")
+quest_master = NodePath("../../NPCs/environmentalist_janna")
 world_map = NodePath("../..")
 
 [node name="trash16" parent="mis_3" node_paths=PackedStringArray("quest_master", "world_map") instance=ExtResource("9_v2cfe")]
 z_index = 1
 position = Vector2(1760, 1008)
-quest_master = NodePath("../../environmentalist_janna")
+quest_master = NodePath("../../NPCs/environmentalist_janna")
 world_map = NodePath("../..")
 
 [node name="trash17" parent="mis_3" node_paths=PackedStringArray("quest_master", "world_map") instance=ExtResource("9_v2cfe")]
 z_index = 1
 position = Vector2(1904, 1024)
-quest_master = NodePath("../../environmentalist_janna")
+quest_master = NodePath("../../NPCs/environmentalist_janna")
 world_map = NodePath("../..")
 
 [node name="trash18" parent="mis_3" node_paths=PackedStringArray("quest_master", "world_map") instance=ExtResource("9_v2cfe")]
 z_index = 1
 position = Vector2(2000, 944)
-quest_master = NodePath("../../environmentalist_janna")
+quest_master = NodePath("../../NPCs/environmentalist_janna")
 world_map = NodePath("../..")
 
 [node name="trash19" parent="mis_3" node_paths=PackedStringArray("quest_master", "world_map") instance=ExtResource("9_v2cfe")]
 z_index = 1
 position = Vector2(2048, 1008)
-quest_master = NodePath("../../environmentalist_janna")
+quest_master = NodePath("../../NPCs/environmentalist_janna")
 world_map = NodePath("../..")
 
 [node name="mis_4" type="Node2D" parent="."]
@@ -735,31 +737,31 @@ world_map = NodePath("../..")
 [node name="trash16" parent="mis_4" node_paths=PackedStringArray("quest_master", "world_map") instance=ExtResource("9_v2cfe")]
 z_index = 1
 position = Vector2(2048, 1424)
-quest_master = NodePath("../../adventurer_michel")
+quest_master = NodePath("../../NPCs/adventurer_michel")
 world_map = NodePath("../..")
 
 [node name="trash21" parent="mis_4" node_paths=PackedStringArray("quest_master", "world_map") instance=ExtResource("9_v2cfe")]
 z_index = 1
 position = Vector2(1968, 1408)
-quest_master = NodePath("../../adventurer_michel")
+quest_master = NodePath("../../NPCs/adventurer_michel")
 world_map = NodePath("../..")
 
 [node name="trash22" parent="mis_4" node_paths=PackedStringArray("quest_master", "world_map") instance=ExtResource("9_v2cfe")]
 z_index = 1
 position = Vector2(2000, 1328)
-quest_master = NodePath("../../adventurer_michel")
+quest_master = NodePath("../../NPCs/adventurer_michel")
 world_map = NodePath("../..")
 
 [node name="trash23" parent="mis_4" node_paths=PackedStringArray("quest_master", "world_map") instance=ExtResource("9_v2cfe")]
 z_index = 1
 position = Vector2(2224, 1440)
-quest_master = NodePath("../../adventurer_michel")
+quest_master = NodePath("../../NPCs/adventurer_michel")
 world_map = NodePath("../..")
 
 [node name="trash24" parent="mis_4" node_paths=PackedStringArray("quest_master", "world_map") instance=ExtResource("9_v2cfe")]
 z_index = 1
 position = Vector2(2192, 1328)
-quest_master = NodePath("../../adventurer_michel")
+quest_master = NodePath("../../NPCs/adventurer_michel")
 world_map = NodePath("../..")
 
 [node name="mis_5" type="Node2D" parent="."]
@@ -767,31 +769,31 @@ world_map = NodePath("../..")
 [node name="trash21" parent="mis_5" node_paths=PackedStringArray("quest_master", "world_map") instance=ExtResource("9_v2cfe")]
 z_index = 1
 position = Vector2(1696, 1504)
-quest_master = NodePath("../../teenager_johnny")
+quest_master = NodePath("../../NPCs/teenager_johnny")
 world_map = NodePath("../..")
 
 [node name="trash26" parent="mis_5" node_paths=PackedStringArray("quest_master", "world_map") instance=ExtResource("9_v2cfe")]
 z_index = 1
 position = Vector2(1616, 1504)
-quest_master = NodePath("../../teenager_johnny")
+quest_master = NodePath("../../NPCs/teenager_johnny")
 world_map = NodePath("../..")
 
 [node name="trash27" parent="mis_5" node_paths=PackedStringArray("quest_master", "world_map") instance=ExtResource("9_v2cfe")]
 z_index = 1
 position = Vector2(1776, 1520)
-quest_master = NodePath("../../teenager_johnny")
+quest_master = NodePath("../../NPCs/teenager_johnny")
 world_map = NodePath("../..")
 
 [node name="trash28" parent="mis_5" node_paths=PackedStringArray("quest_master", "world_map") instance=ExtResource("9_v2cfe")]
 z_index = 1
 position = Vector2(1744, 1568)
-quest_master = NodePath("../../teenager_johnny")
+quest_master = NodePath("../../NPCs/teenager_johnny")
 world_map = NodePath("../..")
 
 [node name="trash29" parent="mis_5" node_paths=PackedStringArray("quest_master", "world_map") instance=ExtResource("9_v2cfe")]
 z_index = 1
 position = Vector2(1568, 1520)
-quest_master = NodePath("../../teenager_johnny")
+quest_master = NodePath("../../NPCs/teenager_johnny")
 world_map = NodePath("../..")
 
 [node name="invs_wall" type="StaticBody2D" parent="."]
@@ -818,7 +820,7 @@ mouse_filter = 2
 player = NodePath("../player")
 tilemap_layers = NodePath("../map_layer")
 player_camera = NodePath("../player/Camera2D")
-NPCS = [NodePath("../old_man_andrew"), NodePath("../kid_lary"), NodePath("../environmentalist_janna"), NodePath("../adventurer_michel"), NodePath("../teenager_johnny")]
+NPCS = [NodePath("../NPCs/old_man_andrew"), NodePath("../NPCs/kid_lary"), NodePath("../NPCs/environmentalist_janna"), NodePath("../NPCs/adventurer_michel"), NodePath("../NPCs/teenager_johnny")]
 
 [node name="CutsceneManager" type="AnimationPlayer" parent="."]
 libraries = {
@@ -832,292 +834,292 @@ volume_db = -10.1
 autoplay = true
 bus = &"Music"
 
-[node name="Node2D" type="Node2D" parent="."]
+[node name="Environment" type="Node2D" parent="."]
 
-[node name="StaticBody2D" type="StaticBody2D" parent="Node2D"]
+[node name="StaticBody2D" type="StaticBody2D" parent="Environment"]
 position = Vector2(1638, 1078)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/StaticBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Environment/StaticBody2D"]
 position = Vector2(2, 2.5)
 shape = SubResource("RectangleShape2D_e3m37")
 
-[node name="StaticBody2D2" type="StaticBody2D" parent="Node2D"]
+[node name="StaticBody2D2" type="StaticBody2D" parent="Environment"]
 z_index = 3
 position = Vector2(1605, 1110)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/StaticBody2D2"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Environment/StaticBody2D2"]
 position = Vector2(2, 2.5)
 shape = SubResource("RectangleShape2D_e3m37")
 
-[node name="StaticBody2D3" type="StaticBody2D" parent="Node2D"]
+[node name="StaticBody2D3" type="StaticBody2D" parent="Environment"]
 z_index = 3
 position = Vector2(1573, 1158)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/StaticBody2D3"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Environment/StaticBody2D3"]
 position = Vector2(2, 2.5)
 shape = SubResource("RectangleShape2D_e3m37")
 
-[node name="StaticBody2D4" type="StaticBody2D" parent="Node2D"]
+[node name="StaticBody2D4" type="StaticBody2D" parent="Environment"]
 z_index = 3
 position = Vector2(1604, 1190)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/StaticBody2D4"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Environment/StaticBody2D4"]
 position = Vector2(2, 2.5)
 shape = SubResource("RectangleShape2D_e3m37")
 
-[node name="StaticBody2D5" type="StaticBody2D" parent="Node2D"]
+[node name="StaticBody2D5" type="StaticBody2D" parent="Environment"]
 z_index = 3
 position = Vector2(1366, 1190)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/StaticBody2D5"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Environment/StaticBody2D5"]
 position = Vector2(2, 2.5)
 shape = SubResource("RectangleShape2D_e3m37")
 
-[node name="StaticBody2D6" type="StaticBody2D" parent="Node2D"]
+[node name="StaticBody2D6" type="StaticBody2D" parent="Environment"]
 z_index = 3
 position = Vector2(1318, 1126)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/StaticBody2D6"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Environment/StaticBody2D6"]
 position = Vector2(2, 2.5)
 shape = SubResource("RectangleShape2D_e3m37")
 
-[node name="StaticBody2D7" type="StaticBody2D" parent="Node2D"]
+[node name="StaticBody2D7" type="StaticBody2D" parent="Environment"]
 z_index = 3
 position = Vector2(1557, 1350)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/StaticBody2D7"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Environment/StaticBody2D7"]
 position = Vector2(2, 2.5)
 shape = SubResource("RectangleShape2D_e3m37")
 
-[node name="StaticBody2D8" type="StaticBody2D" parent="Node2D"]
+[node name="StaticBody2D8" type="StaticBody2D" parent="Environment"]
 z_index = 3
 position = Vector2(1653, 1430)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/StaticBody2D8"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Environment/StaticBody2D8"]
 position = Vector2(2, 2.5)
 shape = SubResource("RectangleShape2D_e3m37")
 
-[node name="StaticBody2D9" type="StaticBody2D" parent="Node2D"]
+[node name="StaticBody2D9" type="StaticBody2D" parent="Environment"]
 z_index = 3
 position = Vector2(1877, 1414)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/StaticBody2D9"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Environment/StaticBody2D9"]
 position = Vector2(2, 2.5)
 shape = SubResource("RectangleShape2D_e3m37")
 
-[node name="StaticBody2D10" type="StaticBody2D" parent="Node2D"]
+[node name="StaticBody2D10" type="StaticBody2D" parent="Environment"]
 z_index = 3
 position = Vector2(1941, 1446)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/StaticBody2D10"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Environment/StaticBody2D10"]
 position = Vector2(2, 2.5)
 shape = SubResource("RectangleShape2D_e3m37")
 
-[node name="StaticBody2D11" type="StaticBody2D" parent="Node2D"]
+[node name="StaticBody2D11" type="StaticBody2D" parent="Environment"]
 z_index = 3
 position = Vector2(1909, 1382)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/StaticBody2D11"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Environment/StaticBody2D11"]
 position = Vector2(2, 2.5)
 shape = SubResource("RectangleShape2D_e3m37")
 
-[node name="StaticBody2D12" type="StaticBody2D" parent="Node2D"]
+[node name="StaticBody2D12" type="StaticBody2D" parent="Environment"]
 z_index = 3
 position = Vector2(2102, 1399)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/StaticBody2D12"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Environment/StaticBody2D12"]
 position = Vector2(2, 2.5)
 shape = SubResource("RectangleShape2D_e3m37")
 
-[node name="StaticBody2D13" type="StaticBody2D" parent="Node2D"]
+[node name="StaticBody2D13" type="StaticBody2D" parent="Environment"]
 z_index = 3
 position = Vector2(2166, 1415)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/StaticBody2D13"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Environment/StaticBody2D13"]
 position = Vector2(2, 2.5)
 shape = SubResource("RectangleShape2D_e3m37")
 
-[node name="StaticBody2D14" type="StaticBody2D" parent="Node2D"]
+[node name="StaticBody2D14" type="StaticBody2D" parent="Environment"]
 z_index = 3
 position = Vector2(2150, 1384)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/StaticBody2D14"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Environment/StaticBody2D14"]
 position = Vector2(2, 2.5)
 shape = SubResource("RectangleShape2D_e3m37")
 
-[node name="StaticBody2D15" type="StaticBody2D" parent="Node2D"]
+[node name="StaticBody2D15" type="StaticBody2D" parent="Environment"]
 z_index = 3
 position = Vector2(2099, 1143)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/StaticBody2D15"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Environment/StaticBody2D15"]
 position = Vector2(2, 2.5)
 shape = SubResource("RectangleShape2D_e3m37")
 
-[node name="StaticBody2D16" type="StaticBody2D" parent="Node2D"]
+[node name="StaticBody2D16" type="StaticBody2D" parent="Environment"]
 z_index = 3
 position = Vector2(2157, 1156)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/StaticBody2D16"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Environment/StaticBody2D16"]
 position = Vector2(2, 2.5)
 shape = SubResource("RectangleShape2D_e3m37")
 
-[node name="StaticBody2D17" type="StaticBody2D" parent="Node2D"]
+[node name="StaticBody2D17" type="StaticBody2D" parent="Environment"]
 z_index = 3
 position = Vector2(2159, 1124)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/StaticBody2D17"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Environment/StaticBody2D17"]
 position = Vector2(2, 2.5)
 shape = SubResource("RectangleShape2D_e3m37")
 
-[node name="StaticBody2D18" type="StaticBody2D" parent="Node2D"]
+[node name="StaticBody2D18" type="StaticBody2D" parent="Environment"]
 z_index = 3
 position = Vector2(2211, 1139)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/StaticBody2D18"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Environment/StaticBody2D18"]
 position = Vector2(2, 2.5)
 shape = SubResource("RectangleShape2D_e3m37")
 
-[node name="StaticBody2D19" type="StaticBody2D" parent="Node2D"]
+[node name="StaticBody2D19" type="StaticBody2D" parent="Environment"]
 z_index = 3
 position = Vector2(2221, 1136)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/StaticBody2D19"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Environment/StaticBody2D19"]
 position = Vector2(2, 2.5)
 shape = SubResource("RectangleShape2D_e3m37")
 
-[node name="StaticBody2D20" type="StaticBody2D" parent="Node2D"]
+[node name="StaticBody2D20" type="StaticBody2D" parent="Environment"]
 z_index = 3
 position = Vector2(2233, 1133)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/StaticBody2D20"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Environment/StaticBody2D20"]
 position = Vector2(2, 2.5)
 shape = SubResource("RectangleShape2D_e3m37")
 
-[node name="StaticBody2D21" type="StaticBody2D" parent="Node2D"]
+[node name="StaticBody2D21" type="StaticBody2D" parent="Environment"]
 z_index = 3
 position = Vector2(2242, 1131)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/StaticBody2D21"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Environment/StaticBody2D21"]
 position = Vector2(2, 2.5)
 shape = SubResource("RectangleShape2D_e3m37")
 
-[node name="StaticBody2D22" type="StaticBody2D" parent="Node2D"]
+[node name="StaticBody2D22" type="StaticBody2D" parent="Environment"]
 z_index = 3
 position = Vector2(2230, 1130)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/StaticBody2D22"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Environment/StaticBody2D22"]
 position = Vector2(2, 2.5)
 shape = SubResource("RectangleShape2D_e3m37")
 
-[node name="StaticBody2D23" type="StaticBody2D" parent="Node2D"]
+[node name="StaticBody2D23" type="StaticBody2D" parent="Environment"]
 z_index = 3
 position = Vector2(2230, 1143)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/StaticBody2D23"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Environment/StaticBody2D23"]
 position = Vector2(2, 2.5)
 shape = SubResource("RectangleShape2D_e3m37")
 
-[node name="StaticBody2D24" type="StaticBody2D" parent="Node2D"]
+[node name="StaticBody2D24" type="StaticBody2D" parent="Environment"]
 z_index = 3
 position = Vector2(1893, 1237)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/StaticBody2D24"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Environment/StaticBody2D24"]
 position = Vector2(2, 2.5)
 shape = SubResource("RectangleShape2D_e3m37")
 
-[node name="StaticBody2D25" type="StaticBody2D" parent="Node2D"]
+[node name="StaticBody2D25" type="StaticBody2D" parent="Environment"]
 z_index = 3
 position = Vector2(1830, 1158)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/StaticBody2D25"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Environment/StaticBody2D25"]
 position = Vector2(2, 2.5)
 shape = SubResource("RectangleShape2D_e3m37")
 
-[node name="StaticBody2D26" type="StaticBody2D" parent="Node2D"]
+[node name="StaticBody2D26" type="StaticBody2D" parent="Environment"]
 z_index = 3
 position = Vector2(1768, 1193)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/StaticBody2D26"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Environment/StaticBody2D26"]
 position = Vector2(-8.5, -0.5)
 shape = SubResource("RectangleShape2D_gy7ta")
 
-[node name="StaticBody2D27" type="StaticBody2D" parent="Node2D"]
+[node name="StaticBody2D27" type="StaticBody2D" parent="Environment"]
 z_index = 3
 position = Vector2(1763, 965)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/StaticBody2D27"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Environment/StaticBody2D27"]
 position = Vector2(29, -11.5)
 shape = SubResource("RectangleShape2D_p67os")
 
-[node name="StaticBody2D30" type="StaticBody2D" parent="Node2D"]
+[node name="StaticBody2D30" type="StaticBody2D" parent="Environment"]
 z_index = 3
 position = Vector2(1531, 1457)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/StaticBody2D30"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Environment/StaticBody2D30"]
 position = Vector2(29, -26)
 shape = SubResource("RectangleShape2D_p67os")
 
-[node name="StaticBody2D31" type="StaticBody2D" parent="Node2D"]
+[node name="StaticBody2D31" type="StaticBody2D" parent="Environment"]
 z_index = 3
 position = Vector2(1386, 1479)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/StaticBody2D31"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Environment/StaticBody2D31"]
 position = Vector2(38.5, -70.5)
 shape = SubResource("RectangleShape2D_6vtue")
 
-[node name="StaticBody2D32" type="StaticBody2D" parent="Node2D"]
+[node name="StaticBody2D32" type="StaticBody2D" parent="Environment"]
 z_index = 3
 position = Vector2(1449, 1174)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/StaticBody2D32"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Environment/StaticBody2D32"]
 position = Vector2(38.5, -59.75)
 shape = SubResource("RectangleShape2D_h6f5o")
 
-[node name="StaticBody2D33" type="StaticBody2D" parent="Node2D"]
+[node name="StaticBody2D33" type="StaticBody2D" parent="Environment"]
 z_index = 3
 position = Vector2(1436, 1213)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/StaticBody2D33"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Environment/StaticBody2D33"]
 position = Vector2(-3, -20)
 shape = SubResource("RectangleShape2D_dkr5p")
 
-[node name="StaticBody2D34" type="StaticBody2D" parent="Node2D"]
+[node name="StaticBody2D34" type="StaticBody2D" parent="Environment"]
 z_index = 3
 position = Vector2(1508, 1218)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/StaticBody2D34"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Environment/StaticBody2D34"]
 position = Vector2(11.5, -16.5)
 shape = SubResource("RectangleShape2D_panir")
 
-[node name="StaticBody2D35" type="StaticBody2D" parent="Node2D"]
+[node name="StaticBody2D35" type="StaticBody2D" parent="Environment"]
 z_index = 3
 position = Vector2(1508, 1218)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/StaticBody2D35"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Environment/StaticBody2D35"]
 position = Vector2(-18, -14.5)
 shape = SubResource("RectangleShape2D_w4r3c")
 
-[node name="StaticBody2D36" type="StaticBody2D" parent="Node2D"]
+[node name="StaticBody2D36" type="StaticBody2D" parent="Environment"]
 z_index = 3
 position = Vector2(1566, 1204)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/StaticBody2D36"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Environment/StaticBody2D36"]
 position = Vector2(-18, -14.5)
 shape = SubResource("RectangleShape2D_w4r3c")
 
-[node name="StaticBody2D28" type="StaticBody2D" parent="Node2D"]
+[node name="StaticBody2D28" type="StaticBody2D" parent="Environment"]
 z_index = 3
 position = Vector2(2076, 1320)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/StaticBody2D28"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Environment/StaticBody2D28"]
 position = Vector2(20, -15)
 shape = SubResource("RectangleShape2D_7sasq")
 
-[node name="StaticBody2D29" type="StaticBody2D" parent="Node2D"]
+[node name="StaticBody2D29" type="StaticBody2D" parent="Environment"]
 z_index = 3
 position = Vector2(2255, 1385)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/StaticBody2D29"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Environment/StaticBody2D29"]
 position = Vector2(20, -15)
 shape = SubResource("RectangleShape2D_7sasq")
 

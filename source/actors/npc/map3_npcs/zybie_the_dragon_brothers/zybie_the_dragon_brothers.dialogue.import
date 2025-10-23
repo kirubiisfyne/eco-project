@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_13"
+type="Resource"
+uid="uid://c01go4j0d8h85"
+path="res://.godot/imported/zybie_the_dragon_brothers.dialogue-34b541a8d2469798029b976762bdd023.tres"
+
+[deps]
+
+source_file="res://source/actors/npc/map3_npcs/zybie_the_dragon_brothers/zybie_the_dragon_brothers.dialogue"
+dest_files=["res://.godot/imported/zybie_the_dragon_brothers.dialogue-34b541a8d2469798029b976762bdd023.tres"]
+
+[params]
+
+defaults=true

@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_13"
+type="Resource"
+uid="uid://c0cg05itp0u2f"
+path="res://.godot/imported/mg_goddess_bathala.dialogue-439e15268d1986ee78b5d7a0136d8afc.tres"
+
+[deps]
+
+source_file="res://source/actors/npc/minigame_1/goddess_bathala/mg_goddess_bathala.dialogue"
+dest_files=["res://.godot/imported/mg_goddess_bathala.dialogue-439e15268d1986ee78b5d7a0136d8afc.tres"]
+
+[params]
+
+defaults=true

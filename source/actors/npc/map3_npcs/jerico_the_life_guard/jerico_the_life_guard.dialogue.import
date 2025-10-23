@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_13"
+type="Resource"
+uid="uid://dyoiij343b7ah"
+path="res://.godot/imported/jerico_the_life_guard.dialogue-8501f12b5d1559fae2c6cab41efa9f37.tres"
+
+[deps]
+
+source_file="res://source/actors/npc/map3_npcs/jerico_the_life_guard/jerico_the_life_guard.dialogue"
+dest_files=["res://.godot/imported/jerico_the_life_guard.dialogue-8501f12b5d1559fae2c6cab41efa9f37.tres"]
+
+[params]
+
+defaults=true

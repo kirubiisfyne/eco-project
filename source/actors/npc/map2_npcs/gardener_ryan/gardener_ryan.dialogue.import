@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_13"
+type="Resource"
+uid="uid://oelw34px6o04"
+path="res://.godot/imported/gardener_ryan.dialogue-8edd1204ff486f77bb2d05954482193b.tres"
+
+[deps]
+
+source_file="res://source/actors/npc/map2_npcs/gardener_ryan/gardener_ryan.dialogue"
+dest_files=["res://.godot/imported/gardener_ryan.dialogue-8edd1204ff486f77bb2d05954482193b.tres"]
+
+[params]
+
+defaults=true

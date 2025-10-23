@@ -8,27 +8,27 @@ const TRASH_BIN = preload("res://source/objects/trash_bin/trash_bin.dialogue")
 
 #mg_1
 const PLAYER = preload("res://source/actors/player/player.dialogue")
-const OLD_MAN = preload("res://source/actors/npc/old_man/old_man.dialogue")
-const KID_LARY = preload("res://source/actors/npc/kid_lary/kid_lary.dialogue")
-const ENVIRONMENTALIST_JANNA = preload("res://source/actors/npc/environmentalist_janna/environmentalist_janna.dialogue")
-const ADVENTURER_MICHEL = preload("res://source/actors/npc/adventurer_mic1/adventurer_michel.dialogue")
-const TEENAGER_JOHNNY = preload("res://source/actors/npc/teenager_johnny/teenager_johnny.dialogue")
+const OLD_MAN = preload("res://source/actors/npc/map1_npcs/old_man/old_man.dialogue")
+const KID_LARY = preload("res://source/actors/npc/map1_npcs/kid_lary/kid_lary.dialogue")
+const ENVIRONMENTALIST_JANNA = preload("res://source/actors/npc/map1_npcs/environmentalist_janna/environmentalist_janna.dialogue")
+const ADVENTURER_MICHEL = preload("res://source/actors/npc/map1_npcs/adventurer_michel/adventurer_michel.dialogue")
+const TEENAGER_JOHNNY = preload("res://source/actors/npc/map1_npcs/teenager_johnny/teenager_johnny.dialogue")
 
 const BUS = preload("res://source/actors/inter_objects/bus/bus.dialogue")
 
 #map_2
-const GARDENER_RYAN = preload("res://source/actors/npc/map_2/gardener_ryan/gardener_ryan.dialogue")
-const ECONOMIST_REBECCA = preload("res://source/actors/npc/map_2/economist_rebecca/economist_rebecca.dialogue")
-const GODDESS_BATHALA = preload("res://source/actors/npc/map_2/goddess_bathala/goddess_bathala.dialogue")
-const BIOLOGY_STUDENT_AKI = preload("res://source/actors/npc/map_2/biology_student_aki/biology_student_aki.dialogue")
-const WANDERING_CHILD_RYAN = preload("res://source/actors/npc/map_2/wandering_child_ryan/wandering_child_ryan.dialogue")
+const GARDENER_RYAN = preload("res://source/actors/npc/map2_npcs/gardener_ryan/gardener_ryan.dialogue")
+const ECONOMIST_REBECCA = preload("res://source/actors/npc/map2_npcs/economist_rebecca/economist_rebecca.dialogue")
+const GODDESS_BATHALA = preload("res://source/actors/npc/map2_npcs/goddess_bathala/goddess_bathala.dialogue")
+const BIOLOGY_STUDENT_AKI = preload("res://source/actors/npc/map2_npcs/biology_student_aki/biology_student_aki.dialogue")
+const WANDERING_CHILD_RYAN = preload("res://source/actors/npc/map2_npcs/wandering_child_ryan/wandering_child_ryan.dialogue")
 
 #map_3
-const BRENSTON_THE_TOURIST = preload("res://source/actors/npc/map_3/brenston_the_tourist/brenston_the_tourist.dialogue")
-const GAMEL_THE_DRAGON_BROTHERS = preload("res://source/actors/npc/map_3/gamel_the_dragon_brothers/gamel_the_dragon_brothers.dialogue")
-const JACKSIE_THE_AQUA_STUDENT = preload("res://source/actors/npc/map_3/jacksie_the_aqua_student/jacksie_the_aqua_student.dialogue")
-const JERICO_THE_LIFE_GUARD = preload("res://source/actors/npc/map_3/jerico_the_life_guard/jerico_the_life_guard.dialogue")
-const ZYBIE_THE_DRAGON_BROTHERS = preload("res://source/actors/npc/map_3/zybie_the_dragon_brothers/zybie_the_dragon_brothers.dialogue")
+const BRENSTON_THE_TOURIST = preload("res://source/actors/npc/map3_npcs/brenston_the_tourist/brenston_the_tourist.dialogue")
+const GAMEL_THE_DRAGON_BROTHERS = preload("res://source/actors/npc/map3_npcs/gamel_the_dragon_brothers/gamel_the_dragon_brothers.dialogue")
+const JACKSIE_THE_AQUA_STUDENT = preload("res://source/actors/npc/map3_npcs/jacksie_the_aqua_student/jacksie_the_aqua_student.dialogue")
+const JERICO_THE_LIFE_GUARD = preload("res://source/actors/npc/map3_npcs/jerico_the_life_guard/jerico_the_life_guard.dialogue")
+const ZYBIE_THE_DRAGON_BROTHERS = preload("res://source/actors/npc/map3_npcs/zybie_the_dragon_brothers/zybie_the_dragon_brothers.dialogue")
 
 
 func _ready() -> void:

@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://bc04ratc3kyrg" path="res://assets/tileset/11_Camping_16x16.png" id="3_6lkj6"]
 [ext_resource type="PackedScene" uid="uid://dvbdiuxk4fgdr" path="res://source/actors/player_fighting/player_fighting.tscn" id="5_d435b"]
 [ext_resource type="PackedScene" uid="uid://b48b68clrvqcl" path="res://source/actors/enemies/trash_slime/trash_slime.tscn" id="6_x1mkp"]
-[ext_resource type="PackedScene" uid="uid://k6gkt8jqoqym" path="res://source/actors/npc/1_minigame/goddess_bathala/mg_goddess_bathala.tscn" id="7_rg2oa"]
+[ext_resource type="PackedScene" uid="uid://k6gkt8jqoqym" path="res://source/actors/npc/minigame_1/goddess_bathala/mg_goddess_bathala.tscn" id="7_rg2oa"]
 [ext_resource type="PackedScene" uid="uid://dy8v87qarfpsa" path="res://source/UI/paused_menu/pause_menu.tscn" id="8_35n2x"]
 [ext_resource type="AudioStream" uid="uid://dnfwg77geqgjq" path="res://assets/audios/bgm/Warriors' Rage.mp3" id="9_lwi44"]
 

@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_13"
+type="Resource"
+uid="uid://7dyxal5xebvn"
+path="res://.godot/imported/environmentalist_janna.dialogue-c7438c245930d532452d3c48a38202e4.tres"
+
+[deps]
+
+source_file="res://source/actors/npc/map1_npcs/environmentalist_janna/environmentalist_janna.dialogue"
+dest_files=["res://.godot/imported/environmentalist_janna.dialogue-c7438c245930d532452d3c48a38202e4.tres"]
+
+[params]
+
+defaults=true

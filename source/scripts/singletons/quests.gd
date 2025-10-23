@@ -17,12 +17,7 @@ var map_1: Dictionary = {
 	"teenager_johnny": 1,
 	"old_man_andrew": 1
 }
-#var kid_lary: int = 1
-#var environmentalist_janna: int = 1
-#var adventurer_michel: int = 1
-#var teenager_johnny: int = 1
 
-#mg_2
 var map_2: Dictionary = {
 	"gardener_ryan" = 1,
 	"goddess_bathala" = 1,
@@ -30,12 +25,6 @@ var map_2: Dictionary = {
 	"biology_student_aki" = 1,
 	"wandering_child_ryan" = 1
 }
-#var gardener_ryan: int = 1
-#var goddess_bathala: int = 1
-#var economist_rebecca:int = 1
-#var biology_student_aki: int = 1
-#var wandering_child_ryan: int = 1
-
 
 var map_3: Dictionary = {
 	"brenston_the_tourist" = 1,
@@ -45,12 +34,9 @@ var map_3: Dictionary = {
 	"zybie_the_dragon_brothers" = 1
 }
 
-
-
 #such other needed, like calling signals
 func remove_objective(NPC_name: String) -> void:
 	emit_signal("remove_objective_UI", NPC_name)
-
 
 #main game part 1 here
 func set_old_man(value: int) -> void:
@@ -76,7 +62,6 @@ func set_teenager_johnny(id: int) -> void:
 	map_1["teenager_johnny"] = id
 	emit_signal("objectify", "Teenager Johnny", 5, 0, map_1["teenager_johnny"])
 
-#mg part 2
 func open_mis_map_2(value: int) -> void:
 	emit_signal("open_mission_2", value)
 
@@ -99,7 +84,6 @@ func set_biology_student_aki(id: int) -> void:
 func set_wandering_child_ryan(id: int) -> void:
 	map_2["wandering_child_ryan"] = id
 	emit_signal("objectify", "Wandering Child Ryan", 5, 0, map_2["wandering_child_ryan"])
-
 
 #map 3
 func open_mis_map_3(value: int) -> void:

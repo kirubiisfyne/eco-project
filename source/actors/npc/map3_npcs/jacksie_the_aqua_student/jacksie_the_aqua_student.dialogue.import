@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_13"
+type="Resource"
+uid="uid://bcd5w1nweb6sj"
+path="res://.godot/imported/jacksie_the_aqua_student.dialogue-48dae7b1e3ae8a4159329c4b487042d4.tres"
+
+[deps]
+
+source_file="res://source/actors/npc/map3_npcs/jacksie_the_aqua_student/jacksie_the_aqua_student.dialogue"
+dest_files=["res://.godot/imported/jacksie_the_aqua_student.dialogue-48dae7b1e3ae8a4159329c4b487042d4.tres"]
+
+[params]
+
+defaults=true

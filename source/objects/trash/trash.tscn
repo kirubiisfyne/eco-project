@@ -12,14 +12,12 @@ script = ExtResource("1_rdou2")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1
-position = Vector2(8, -6)
 texture = ExtResource("1_f4vas")
 hframes = 5
 vframes = 6
 frame = 26
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(8, -6)
 shape = SubResource("CircleShape2D_gruwf")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]

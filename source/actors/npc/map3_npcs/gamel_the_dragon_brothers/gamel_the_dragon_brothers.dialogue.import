@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_13"
+type="Resource"
+uid="uid://b2la4hlac7t7o"
+path="res://.godot/imported/gamel_the_dragon_brothers.dialogue-62ebbf7545b2508feb75024706f93f94.tres"
+
+[deps]
+
+source_file="res://source/actors/npc/map3_npcs/gamel_the_dragon_brothers/gamel_the_dragon_brothers.dialogue"
+dest_files=["res://.godot/imported/gamel_the_dragon_brothers.dialogue-62ebbf7545b2508feb75024706f93f94.tres"]
+
+[params]
+
+defaults=true

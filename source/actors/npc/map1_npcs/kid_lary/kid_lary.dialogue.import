@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_13"
+type="Resource"
+uid="uid://cs82loybq25f1"
+path="res://.godot/imported/kid_lary.dialogue-64d54fe7afb6c707758dea5a5dd18f96.tres"
+
+[deps]
+
+source_file="res://source/actors/npc/map1_npcs/kid_lary/kid_lary.dialogue"
+dest_files=["res://.godot/imported/kid_lary.dialogue-64d54fe7afb6c707758dea5a5dd18f96.tres"]
+
+[params]
+
+defaults=true

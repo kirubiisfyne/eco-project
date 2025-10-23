@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://bc04ratc3kyrg" path="res://assets/tileset/11_Camping_16x16.png" id="3_j30vq"]
 [ext_resource type="PackedScene" uid="uid://dvbdiuxk4fgdr" path="res://source/actors/player_fighting/player_fighting.tscn" id="4_l2pe2"]
 [ext_resource type="PackedScene" uid="uid://btey885vd86un" path="res://source/actors/enemies/trash_boss/trash_boss.tscn" id="5_xvqey"]
-[ext_resource type="PackedScene" uid="uid://k6gkt8jqoqym" path="res://source/actors/npc/1_minigame/goddess_bathala/mg_goddess_bathala.tscn" id="6_itven"]
+[ext_resource type="PackedScene" uid="uid://k6gkt8jqoqym" path="res://source/actors/npc/minigame_1/goddess_bathala/mg_goddess_bathala.tscn" id="6_itven"]
 [ext_resource type="PackedScene" uid="uid://cgqi6o8wwsamf" path="res://source/UI/minigame_UI/mg_ui.tscn" id="8_r0ipf"]
 [ext_resource type="PackedScene" uid="uid://dy8v87qarfpsa" path="res://source/UI/paused_menu/pause_menu.tscn" id="9_3g2su"]
 [ext_resource type="PackedScene" uid="uid://de0enwhy7ubn5" path="res://source/UI/game_over_scene/game_over_screen.tscn" id="10_je7iq"]
