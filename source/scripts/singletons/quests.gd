@@ -3,7 +3,7 @@ extends Node
 signal open_mission(num)
 signal open_mission_2(num)
 signal open_mission_3(num)
-signal objectify(npc_name, trash_number, plant_number, quest_id)
+signal objectify(npc_name, trash_number, quest_id)
 signal remove_objective_UI(npc_name)
 
 #main game part 1 here
@@ -41,49 +41,49 @@ func remove_objective(NPC_name: String) -> void:
 #main game part 1 here
 func set_old_man(value: int) -> void:
 	map_1["old_man_andrew"] = value
-	emit_signal("objectify", "Old Man Andrew", 5, 0, map_1["old_man_andrew"])
+	emit_signal("objectify", "Old Man Andrew", 5, map_1["old_man_andrew"])
 
 func open_mis_old_man(id: int) -> void:
 	emit_signal("open_mission", id)
 
 func set_kid_lary(id: int) -> void:
 	map_1["kid_lary"] = id
-	emit_signal("objectify", "Kid Lary", 5, 0, map_1["kid_lary"])
+	emit_signal("objectify", "Kid Lary", 5, map_1["kid_lary"])
 
 func set_evironmentalist_janna(id: int) -> void:
 	map_1["environmentalist_janna"] = id
-	emit_signal("objectify", "Environmentalist Janna", 5, 0, map_1["environmentalist_janna"])
+	emit_signal("objectify", "Environmentalist Janna", 5, map_1["environmentalist_janna"])
 
 func set_adventurer_michel(id: int) -> void:
 	map_1["adventurer_michel"] = id
-	emit_signal("objectify", "Adventurer Michel", 5, 0, map_1["adventurer_michel"])
+	emit_signal("objectify", "Adventurer Michel", 5, map_1["adventurer_michel"])
 
 func set_teenager_johnny(id: int) -> void:
 	map_1["teenager_johnny"] = id
-	emit_signal("objectify", "Teenager Johnny", 5, 0, map_1["teenager_johnny"])
+	emit_signal("objectify", "Teenager Johnny", 5, map_1["teenager_johnny"])
 
 func open_mis_map_2(value: int) -> void:
 	emit_signal("open_mission_2", value)
 
 func set_gardener_ryan(id: int) -> void:
 	map_2["gardener_ryan"] = id
-	emit_signal("objectify", "Gardener Ryan", 5, 0, map_2["gardener_ryan"])
+	emit_signal("objectify", "Gardener Ryan", 5, map_2["gardener_ryan"])
 
 func set_goddess_bathala(id: int) -> void:
 	map_2["goddess_bathala"] = id
-	emit_signal("objectify", "Goddess Bathala", 5, 0, map_2["goddess_bathala"])
+	emit_signal("objectify", "Goddess Bathala", 5, map_2["goddess_bathala"])
 
 func set_economist_rebecca(id: int) -> void:
 	map_2["economist_rebecca"] = id
-	emit_signal("objectify", "Economist Rebecca", 5, 0, map_2["economist_rebecca"])
+	emit_signal("objectify", "Economist Rebecca", 5, map_2["economist_rebecca"])
 
 func set_biology_student_aki(id: int) -> void:
 	map_2["biology_student_aki"] = id
-	emit_signal("objectify", "Biology Student Aki", 5, 0, map_2["biology_student_aki"])
+	emit_signal("objectify", "Biology Student Aki", 5, map_2["biology_student_aki"])
 
 func set_wandering_child_ryan(id: int) -> void:
 	map_2["wandering_child_ryan"] = id
-	emit_signal("objectify", "Wandering Child Ryan", 5, 0, map_2["wandering_child_ryan"])
+	emit_signal("objectify", "Wandering Child Ryan", 5, map_2["wandering_child_ryan"])
 
 #map 3
 func open_mis_map_3(value: int) -> void:
@@ -91,20 +91,20 @@ func open_mis_map_3(value: int) -> void:
 
 func set_brenston_the_tourist(id: int) -> void:
 	map_3["brenston_the_tourist"] = id
-	emit_signal("objectify", "Brenston The Tourist", 5, 0, map_3["brenston_the_tourist"])
+	emit_signal("objectify", "Brenston The Tourist", 5, map_3["brenston_the_tourist"])
 
 func set_gamel_the_dragon_brothers(id: int) -> void:
 	map_3["gamel_the_dragon_brothers"] = id
-	emit_signal("objectify", "Gamel the Dragon Brother", 5, 0, map_3["gamel_the_dragon_brothers"])
+	emit_signal("objectify", "Gamel the Dragon Brother", 5, map_3["gamel_the_dragon_brothers"])
 
 func set_jacksie_the_aqua_student(id: int) -> void:
 	map_3["jacksie_the_aqua_student"] = id
-	emit_signal("objectify", "Jacksie the Aqua Student", 5, 0, map_3["jacksie_the_aqua_student"])
+	emit_signal("objectify", "Jacksie the Aqua Student", 5, map_3["jacksie_the_aqua_student"])
 
 func set_jerico_the_life_guard(id: int) -> void:
 	map_3["jerico_the_life_guard"] = id
-	emit_signal("objectify", "Jerico the Lifeguard", 5, 0, map_3["jerico_the_life_guard"])
+	emit_signal("objectify", "Jerico the Lifeguard", 5, map_3["jerico_the_life_guard"])
 
 func set_zybie_the_dragon_brothers(id: int) -> void:
 	map_3["zybie_the_dragon_brothers"] = id
-	emit_signal("objectify", "Zybie the Dragon Brother", 5, 0, map_3["zybie_the_dragon_brothers"])
+	emit_signal("objectify", "Zybie the Dragon Brother", 5, map_3["zybie_the_dragon_brothers"])

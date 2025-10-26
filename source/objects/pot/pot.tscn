@@ -17,13 +17,13 @@ texture_filter = 1
 position = Vector2(8, 8)
 texture = ExtResource("1_usg5w")
 
-[node name="w_plant" type="Sprite2D" parent="."]
+[node name="w_plant_watered" type="Sprite2D" parent="."]
 visible = false
 texture_filter = 1
 position = Vector2(8, 8)
 texture = ExtResource("2_wg02k")
 
-[node name="w_plant2" type="Sprite2D" parent="."]
+[node name="w_plant_bud" type="Sprite2D" parent="."]
 visible = false
 texture_filter = 1
 position = Vector2(8, 8)

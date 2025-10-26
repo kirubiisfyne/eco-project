@@ -12,10 +12,3 @@ func _input(event: InputEvent) -> void:
 		and inter_obj.has_method("interact"):
 			animation_man.put_away_anim()
 			inter_obj.interact()
-	
-
-
-	#if PlayerConditionals.is_dialogue == false:
-		#if Input.is_action_just_pressed("interact"):
-			#if inter_obj and inter_obj.has_method("interact"):
-				#inter_obj.interact()
