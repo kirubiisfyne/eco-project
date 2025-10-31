@@ -26,4 +26,5 @@ Gamel the Dragon Brother: Tell Zybie to meet me at Dad’s camping spot, by the 
 Gamel the Dragon Brother: Thanks a bunch! You’re like… the hero of the dragons now!
 do PlayerConditionals.is_dialogue = false
 do PlayerConditionals.map3_score += 1
+set Quests.remove_objective("Gamel the Dragon Brother")
 => END

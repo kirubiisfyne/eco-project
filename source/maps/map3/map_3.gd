@@ -11,7 +11,7 @@ class_name Map3
 @onready var quest_banner: QuestBanner = $CanvasLayer/QuestBanner
 @onready var minimap_ui: MinimapUI = $MinimapUI
 
-@onready var mis_1: Node2D = $mis_list/mis1
+@onready var mis_1: Node2D = $"mis_list/Wildfire Quest"
 @onready var mis_2: Node2D = $mis_list/mis2
 @onready var mis_3: Node2D = $mis_list/mis3
 @onready var mis_4: Node2D = $mis_list/mis4
@@ -25,17 +25,11 @@ func _ready() -> void:
 	dialogue_sub.player_dial('start_3')
 	Quests.open_mission_3.connect(open_mission)
 	Cutscenes.mg3_cutscene_1.connect(cutscene_manager.cutscene_1)
-	#Cutscenes.mg2_cutscene_2.connect(cutscene_manager.cutscene_2)
 	PlayerConditionals.movement_tut_done = true
-	
-	for i in get_tree().get_nodes_in_group("trashbody"):
-		if i.has_signal("open_tb_skillcheck"):
-			i.open_tb_skillcheck.connect(start_skillcheck)
 
 func _input(event: InputEvent) -> void:
 	if Input.is_action_just_pressed("open_settings"):
 		pause_menu.visible = !pause_menu.visible
-	
 
 func _process(delta: float) -> void:
 	for actor in actors:
@@ -61,9 +55,11 @@ func open_mission(num: int) -> void:
 		5:
 			mis_5.visible = true
 
-func start_skillcheck(tb_id: int) -> void:
+func start_skillcheck(tb_id: int, is_on_water: bool) -> void:
+	print("map_3.gd: start_skillcheck() executed!")
+	
 	trash_body_skillcheck.current_id = tb_id
-	trash_body_skillcheck.start_skillcheck
+	trash_body_skillcheck.start_skillcheck(is_on_water)
 	
 	trash_body_skillcheck.visible = true
 	quest_banner.visible = false

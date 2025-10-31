@@ -19,6 +19,6 @@ Biology Student Aki: According to my calculations, this experiment will take lon
 Biology Student Aki: So I would like to thank you for this. Please continue helping the betterment of this planet.
 - Don't worry about it!
 do PlayerConditionals.is_dialogue = false
-set Quests.remove_objective("Biology Student Aki")
 do PlayerConditionals.map2_score += 1
+set Quests.remove_objective("Biology Student Aki")
 => END

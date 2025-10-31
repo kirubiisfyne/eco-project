@@ -1,0 +1,28 @@
+[gd_scene load_steps=2 format=3 uid="uid://c3p43y5chl1ra"]
+
+[ext_resource type="PackedScene" uid="uid://dd8ddybgaq7ha" path="res://source/UI/tb_skillcheck_ui/watertrash.tscn" id="1_7j3e5"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+collision_layer = 65
+collision_mask = 65
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+build_mode = 1
+polygon = PackedVector2Array(128, 128, 128, 512, 1024, 512, 1024, 128)
+
+[node name="Water Trash" parent="." instance=ExtResource("1_7j3e5")]
+position = Vector2(384, 360)
+
+[node name="Water Trash2" parent="." instance=ExtResource("1_7j3e5")]
+position = Vector2(648, 256)
+
+[node name="Water Trash3" parent="." instance=ExtResource("1_7j3e5")]
+position = Vector2(592, 400)
+
+[node name="Water Trash4" parent="." instance=ExtResource("1_7j3e5")]
+position = Vector2(480, 224)
+
+[node name="Water Trash5" parent="." instance=ExtResource("1_7j3e5")]
+position = Vector2(776, 352)

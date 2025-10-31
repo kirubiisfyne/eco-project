@@ -1,6 +1,7 @@
 [remap]
 
-importer="dialogue_manager_compiler_13"
+importer="dialogue_manager"
+importer_version=15
 type="Resource"
 uid="uid://lsrp04mo08wt"
 path="res://.godot/imported/wandering_child_ryan.dialogue-4de0c078bbbf7ffa3a38804333f2f61d.tres"

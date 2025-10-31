@@ -1,6 +1,7 @@
 [remap]
 
-importer="dialogue_manager_compiler_13"
+importer="dialogue_manager"
+importer_version=15
 type="Resource"
 uid="uid://dyoiij343b7ah"
 path="res://.godot/imported/jerico_the_life_guard.dialogue-8501f12b5d1559fae2c6cab41efa9f37.tres"

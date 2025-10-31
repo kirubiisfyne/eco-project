@@ -23,4 +23,5 @@ Goddess Bathala: Wow! Very well!
 Goddess Bathala: Shall I give thy gifts in the future, as thou show their determination in taking care of Mother's Land!
 do PlayerConditionals.is_dialogue = false
 do PlayerConditionals.map2_score += 1
+set Quests.remove_objective("Goddess Bathala")
 => END

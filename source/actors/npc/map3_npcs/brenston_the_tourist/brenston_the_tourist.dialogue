@@ -13,8 +13,6 @@ set Quests.open_mis_map_3(1)
 set Quests.set_brenston_the_tourist(2)
 => END
 
-
-
 ~ quest_done
 Brenston the Tourist: Well now—would you look at that! The shore’s never looked finer!
 - Glad I could help, Brenston.
@@ -27,4 +25,5 @@ Brenston the Tourist: From the bottom of this old sailor’s heart, thank you.
 Brenston the Tourist: Aye! With folks like you around, the ocean’s in good hands.
 do PlayerConditionals.is_dialogue = false
 do PlayerConditionals.map3_score += 1
+set Quests.remove_objective("Brenston The Tourist")
 => END

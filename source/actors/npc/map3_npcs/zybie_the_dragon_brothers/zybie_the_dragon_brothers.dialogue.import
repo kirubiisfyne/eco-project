@@ -1,6 +1,7 @@
 [remap]
 
-importer="dialogue_manager_compiler_13"
+importer="dialogue_manager"
+importer_version=15
 type="Resource"
 uid="uid://c01go4j0d8h85"
 path="res://.godot/imported/zybie_the_dragon_brothers.dialogue-34b541a8d2469798029b976762bdd023.tres"

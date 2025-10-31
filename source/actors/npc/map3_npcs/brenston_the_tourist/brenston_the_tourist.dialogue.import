@@ -1,6 +1,7 @@
 [remap]
 
-importer="dialogue_manager_compiler_13"
+importer="dialogue_manager"
+importer_version=15
 type="Resource"
 uid="uid://chd84inantwn4"
 path="res://.godot/imported/brenston_the_tourist.dialogue-d40a723fa88996c6cbdf9ceb7233c891.tres"

@@ -6,11 +6,11 @@ class_name Map2
 @onready var pause_menu: PausedMenu = $CanvasLayer/pause_menu
 @onready var cutscene_manager: AnimationPlayer = $CutsceneManager
 
-@onready var mis_1: Node2D = $mis_list/mis1
-@onready var mis_2: Node2D = $mis_list/mis2
-@onready var mis_3: Node2D = $mis_list/mis3
-@onready var mis_4: Node2D = $mis_list/mis4
-@onready var mis_5: Node2D = $mis_list/mis5
+@onready var mis_1: Node2D = $"mis_list/Plant-on-Soil Quest"
+@onready var mis_2: Node2D = $"mis_list/Wildfire Quest"
+@onready var mis_3: Node2D = $"mis_list/Water Plants Quest"
+@onready var mis_4: Node2D = $"mis_list/Plant-on-Soil Quest 2"
+@onready var mis_5: Node2D = $"mis_list/Water Plants Quest 2"
 
 @export var dialogue_sub: DialogueSubManager
 
@@ -26,7 +26,6 @@ func _ready() -> void:
 func _input(event: InputEvent) -> void:
 	if Input.is_action_just_pressed("open_settings"):
 		pause_menu.visible = !pause_menu.visible
-	
 
 func _process(delta: float) -> void:
 	for actor in actors:

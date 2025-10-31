@@ -12,5 +12,6 @@ func _process(delta: float) -> void:
 		3:
 			sprite_2d_2.frame = 2
 	
-	if quest_master.NPC_score > 4:
-		Quests.map_2["goddess_bathala"]
+	if quest_master.NPC_score > 4 and Quests.map_2["goddess_bathala"] != 3:
+		print("Goddes Bathala Quest Finnished!")
+		Quests.set_goddess_bathala(3)

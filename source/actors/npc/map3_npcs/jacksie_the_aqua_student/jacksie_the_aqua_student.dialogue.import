@@ -1,6 +1,7 @@
 [remap]
 
-importer="dialogue_manager_compiler_13"
+importer="dialogue_manager"
+importer_version=15
 type="Resource"
 uid="uid://bcd5w1nweb6sj"
 path="res://.godot/imported/jacksie_the_aqua_student.dialogue-48dae7b1e3ae8a4159329c4b487042d4.tres"

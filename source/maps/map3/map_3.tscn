@@ -1,4 +1,4 @@
-[gd_scene load_steps=43 format=4 uid="uid://7vrbrgatcsyf"]
+[gd_scene load_steps=44 format=4 uid="uid://7vrbrgatcsyf"]
 
 [ext_resource type="Script" uid="uid://dm0k4gpo1neq2" path="res://source/maps/map3/map_3.gd" id="1_083j1"]
 [ext_resource type="Texture2D" uid="uid://bc04ratc3kyrg" path="res://assets/tileset/11_Camping_16x16.png" id="1_drgin"]
@@ -16,6 +16,7 @@
 [ext_resource type="PackedScene" uid="uid://cwf1yshncfaqu" path="res://source/UI/minimap_ui/minimap_ui.tscn" id="13_nffx2"]
 [ext_resource type="PackedScene" uid="uid://mn408nb3k1lo" path="res://source/UI/quest_banner_UI/quest_banner.tscn" id="14_bbtwy"]
 [ext_resource type="PackedScene" uid="uid://d12pcva17p0o6" path="res://source/objects/trash_body/trash_body.tscn" id="14_pqamp"]
+[ext_resource type="PackedScene" uid="uid://cdnon7fag7lpt" path="res://source/objects/fire/fire.tscn" id="15_6ikqp"]
 [ext_resource type="PackedScene" uid="uid://n2aqq8k1qrta" path="res://source/UI/score_UI/score_ui.tscn" id="15_xbxsg"]
 [ext_resource type="PackedScene" uid="uid://da5tm51oamvl4" path="res://source/UI/segregation_ui/segregation.tscn" id="16_c0rru"]
 [ext_resource type="PackedScene" uid="uid://dy8v87qarfpsa" path="res://source/UI/paused_menu/pause_menu.tscn" id="17_hmnqv"]
@@ -1286,58 +1287,85 @@ z_index = 4
 collision_mask = 0
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="walls"]
-polygon = PackedVector2Array(0, 896, 0, 944, 64, 944, 64, 912, 80, 912, 80, 864, 192, 864, 192, 896, 416, 896, 416, 864, 688, 864, 688, 896, 960, 896, 960, 912, 1120, 912, 1120, 880, 1152, 880, 1152, 720, 1280, 720, 1280, 688, 1152, 688, 1152, 464, 1312, 464, 1312, 432, 1152, 432, 1152, 240, 1248, 240, 1248, 208, 1152, 208, 1152, 80, 0, 80, 0, 896, -32, 896, -32, 32, 1376, 32, 1376, 1056, -32, 976, -32, 912)
+polygon = PackedVector2Array(0, 896, 0, 944, 64, 944, 64, 912, 80, 912, 80, 864, 192, 864, 192, 896, 416, 896, 416, 864, 688, 864, 688, 896, 960, 896, 960, 912, 1120, 912, 1120, 880, 1152, 880, 1152, 712, 1280, 712, 1280, 688, 1152, 688, 1152, 456, 1312, 456, 1312, 432, 1152, 432, 1152, 232, 1248, 232, 1248, 208, 1152, 208, 1152, 80, 0, 80, 0, 896, -64, 896, -64, 0, 1408, 0, 1408, 1024, -64, 1024, -64, 896)
 
-[node name="bus2" parent="." node_paths=PackedStringArray("dialogue_sub") instance=ExtResource("22_8g3d8")]
+[node name="bus2" parent="." instance=ExtResource("22_8g3d8")]
 position = Vector2(144, 160)
-dialogue_sub = NodePath("../dialogue_sub_manager")
 
 [node name="mis_list" type="Node2D" parent="."]
 
-[node name="mis1" type="Node2D" parent="mis_list"]
-
-[node name="TrashBody" parent="mis_list/mis1" node_paths=PackedStringArray("npc_master", "world_map") instance=ExtResource("14_pqamp")]
+[node name="Wildfire Quest" type="Node2D" parent="mis_list"]
 z_index = 1
-y_sort_enabled = true
-position = Vector2(1048, 480)
-npc_master = NodePath("../../../brenston_the_tourist")
+
+[node name="fire" parent="mis_list/Wildfire Quest" node_paths=PackedStringArray("quest_master", "world_map") instance=ExtResource("15_6ikqp")]
+position = Vector2(1016, 544)
+quest_master = NodePath("../../../brenston_the_tourist")
+world_map = NodePath("../../..")
+
+[node name="fire2" parent="mis_list/Wildfire Quest" node_paths=PackedStringArray("quest_master", "world_map") instance=ExtResource("15_6ikqp")]
+position = Vector2(816, 528)
+quest_master = NodePath("../../../brenston_the_tourist")
+world_map = NodePath("../../..")
+
+[node name="fire3" parent="mis_list/Wildfire Quest" node_paths=PackedStringArray("quest_master", "world_map") instance=ExtResource("15_6ikqp")]
+position = Vector2(880, 472)
+quest_master = NodePath("../../../brenston_the_tourist")
+world_map = NodePath("../../..")
+
+[node name="fire4" parent="mis_list/Wildfire Quest" node_paths=PackedStringArray("quest_master", "world_map") instance=ExtResource("15_6ikqp")]
+position = Vector2(912, 472)
+quest_master = NodePath("../../../brenston_the_tourist")
+world_map = NodePath("../../..")
+
+[node name="fire5" parent="mis_list/Wildfire Quest" node_paths=PackedStringArray("quest_master", "world_map") instance=ExtResource("15_6ikqp")]
+position = Vector2(1096, 440)
+quest_master = NodePath("../../../brenston_the_tourist")
 world_map = NodePath("../../..")
 
 [node name="mis2" type="Node2D" parent="mis_list"]
 
-[node name="TrashBody" parent="mis_list/mis2" node_paths=PackedStringArray("npc_master", "world_map") instance=ExtResource("14_pqamp")]
+[node name="TrashBody" parent="mis_list/mis2" node_paths=PackedStringArray("trash_quest_ui", "npc_master", "world_map") instance=ExtResource("14_pqamp")]
 z_index = 1
 y_sort_enabled = true
-position = Vector2(952, 256)
+position = Vector2(1064, 264)
+trash_quest_ui = NodePath("../../../CanvasLayer/TrashBodySkillcheck")
 npc_master = NodePath("../../../gamel_the_dragon_brothers")
 world_map = NodePath("../../..")
+current_id = 1
+is_on_water = true
 
 [node name="mis3" type="Node2D" parent="mis_list"]
 
-[node name="TrashBody" parent="mis_list/mis3" node_paths=PackedStringArray("npc_master", "world_map") instance=ExtResource("14_pqamp")]
+[node name="TrashBody" parent="mis_list/mis3" node_paths=PackedStringArray("trash_quest_ui", "npc_master", "world_map") instance=ExtResource("14_pqamp")]
 z_index = 1
 y_sort_enabled = true
 position = Vector2(312, 744)
+trash_quest_ui = NodePath("../../../CanvasLayer/TrashBodySkillcheck")
 npc_master = NodePath("../../../jacksie_the_aqua_student")
 world_map = NodePath("../../..")
+current_id = 2
 
 [node name="mis4" type="Node2D" parent="mis_list"]
 
-[node name="TrashBody" parent="mis_list/mis4" node_paths=PackedStringArray("npc_master", "world_map") instance=ExtResource("14_pqamp")]
+[node name="TrashBody" parent="mis_list/mis4" node_paths=PackedStringArray("trash_quest_ui", "npc_master", "world_map") instance=ExtResource("14_pqamp")]
 z_index = 1
 y_sort_enabled = true
 position = Vector2(792, 840)
+trash_quest_ui = NodePath("../../../CanvasLayer/TrashBodySkillcheck")
 npc_master = NodePath("../../../jerico_the_life_guard")
 world_map = NodePath("../../..")
+current_id = 3
 
 [node name="mis5" type="Node2D" parent="mis_list"]
 
-[node name="TrashBody" parent="mis_list/mis5" node_paths=PackedStringArray("npc_master", "world_map") instance=ExtResource("14_pqamp")]
-z_index = 1
+[node name="TrashBody" parent="mis_list/mis5" node_paths=PackedStringArray("trash_quest_ui", "npc_master", "world_map") instance=ExtResource("14_pqamp")]
 y_sort_enabled = true
-position = Vector2(984, 672)
+position = Vector2(1072, 752)
+trash_quest_ui = NodePath("../../../CanvasLayer/TrashBodySkillcheck")
 npc_master = NodePath("../../../zybie_the_dragon_brothers")
-world_map = NodePath("../../../zybie_the_dragon_brothers")
+world_map = NodePath("../../..")
+current_id = 4
+is_on_water = true
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -1361,6 +1389,8 @@ layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_top = -8.0
+offset_bottom = -8.0
 grow_horizontal = 2
 grow_vertical = 2
 

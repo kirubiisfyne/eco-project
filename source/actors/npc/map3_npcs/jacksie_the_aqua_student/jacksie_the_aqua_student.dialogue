@@ -13,7 +13,6 @@ set Quests.open_mis_map_3(3)
 set Quests.set_jacksie_the_aqua_student(2)
 => END
 
-
 ~ quest_done
 Jacksie the Aqua Student: Incredible… absolutely incredible! The shoreline’s pristine—it’s like looking at a page from my textbook!
 - We did it, Jacksie.
@@ -26,4 +25,5 @@ Jacksie the Aqua Student: Thank you, truly. Aqua Academy’s going to hear about
 Jacksie the Aqua Student: With people like you around, the ocean’s future just got a little brighter.
 do PlayerConditionals.is_dialogue = false
 do PlayerConditionals.map3_score += 1
+set Quests.remove_objective("Jacksie the Aqua Student")
 => END

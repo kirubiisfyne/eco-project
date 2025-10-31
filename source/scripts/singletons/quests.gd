@@ -36,6 +36,7 @@ var map_3: Dictionary = {
 
 #such other needed, like calling signals
 func remove_objective(NPC_name: String) -> void:
+	print("quests.gd: " + NPC_name + "'s quest removed!")
 	emit_signal("remove_objective_UI", NPC_name)
 
 #main game part 1 here
@@ -98,6 +99,7 @@ func set_gamel_the_dragon_brothers(id: int) -> void:
 	emit_signal("objectify", "Gamel the Dragon Brother", 5, map_3["gamel_the_dragon_brothers"])
 
 func set_jacksie_the_aqua_student(id: int) -> void:
+	print("Quest! " + str(id))
 	map_3["jacksie_the_aqua_student"] = id
 	emit_signal("objectify", "Jacksie the Aqua Student", 5, map_3["jacksie_the_aqua_student"])
 

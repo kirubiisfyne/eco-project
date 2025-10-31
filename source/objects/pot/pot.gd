@@ -16,6 +16,7 @@ func _ready() -> void:
 func interact() -> void:
 	var qm_score = world_map.current_qm[quest_master.name]
 	if qm_score >= 2:
+		$CollisionShape2D.disabled = true
 		audio_stream_player.play()
 		await audio_stream_player.finished
 		wo_plant.visible = false

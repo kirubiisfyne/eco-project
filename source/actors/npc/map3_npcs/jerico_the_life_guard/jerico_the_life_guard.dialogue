@@ -25,5 +25,6 @@ Jerico the Lifeguard: From one guardian to another… thank you. You’ve got a 
 Jerico the Lifeguard: Heck yeah we are. This beach? It’s in good hands now.
 do PlayerConditionals.is_dialogue = false
 do PlayerConditionals.map3_score += 1
+set Quests.remove_objective("Jerico the Lifeguard")
 => END
 

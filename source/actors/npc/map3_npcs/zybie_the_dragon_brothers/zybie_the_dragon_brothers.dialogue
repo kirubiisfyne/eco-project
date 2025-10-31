@@ -10,9 +10,8 @@ Zybie the Dragon Brother: Please… can you help me clean this up? I need to fin
 Zybie the Dragon Brother: Th-thank you… I just wanna see him again… tell him I’m here…
 do PlayerConditionals.is_dialogue = false
 set Quests.open_mis_map_3(5)
-set Quests.set_jerico_the_life_guard(2)
+set Quests.set_zybie_the_dragon_brothers(2)
 => END
-
 
 ~ quest_done
 Zybie the Dragon Brother: sniff... Wait... is it really...?
@@ -27,5 +26,6 @@ Zybie the Dragon Brother: I just want to make sure he’s okay. You know, just i
 Zybie the Dragon Brother: Thank you... I’ll be waiting. You’re the best for helping us. I don’t know what we’d do without you.
 do PlayerConditionals.is_dialogue = false
 do PlayerConditionals.map3_score += 1
+set Quests.remove_objective("Zybie the Dragon Brother")
 => END
 

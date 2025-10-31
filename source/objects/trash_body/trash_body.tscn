@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://d12pcva17p0o6"]
 
-[ext_resource type="Script" uid="uid://xv3xe6qfeuyr" path="res://source/objects/trash_body/trash_body.gd" id="1_6t4jd"]
+[ext_resource type="Script" uid="uid://cigeqwcxr3sv" path="res://source/objects/trash_body/trash_body.gd" id="1_6t4jd"]
 [ext_resource type="Texture2D" uid="uid://bilell472omr2" path="res://assets/objects/TrashBody/ME_Singles_City_Props_16x16_Trash_Pile_2.png" id="2_02nsg"]
 [ext_resource type="Texture2D" uid="uid://pwcb4gb4nc0b" path="res://assets/objects/TrashBody/ME_Singles_City_Props_16x16_Trash_Pile_3.png" id="3_kwcrk"]
 [ext_resource type="Texture2D" uid="uid://c3iry7itevpss" path="res://assets/objects/TrashBody/ME_Singles_City_Props_16x16_Trash_Pile_4.png" id="4_avqhc"]
