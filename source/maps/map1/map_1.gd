@@ -34,8 +34,7 @@ func _physics_process(delta: float) -> void:
 		else:
 			actor.set_physics_process(true)
 	
-	if PlayerConditionals.map1_finished == false\
-	and PlayerConditionals.map1_score >= 5:
+	if PlayerConditionals.map1_finished == false and PlayerConditionals.map1_score >= 5:
 		PlayerConditionals.map1_finished = true
 
 func _input(event: InputEvent) -> void:

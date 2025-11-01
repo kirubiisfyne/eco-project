@@ -33,6 +33,9 @@ func _process(delta: float) -> void:
 			actor.set_physics_process(false)
 		else:
 			actor.set_physics_process(true)
+	
+	if PlayerConditionals.map3_finished == false and PlayerConditionals.map2_score >= 5:
+		PlayerConditionals.map2_finished = true
 
 func open_mission(num: int) -> void:
 	match num:

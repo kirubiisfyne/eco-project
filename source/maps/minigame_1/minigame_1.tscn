@@ -887,10 +887,7 @@ z_index = 1
 position = Vector2(2, 0)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="invs_wall"]
-polygon = PackedVector2Array(1328, 816, 1328, 1600, 2272, 1600, 2272, 816, 1328, 816, 1328, 704, 2368, 704, 2368, 1824, 1216, 1824, 1216, 816, 1328, 816)
-
-[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="invs_wall"]
-polygon = PackedVector2Array(1328, 816, 1328, 1600, 2272, 1600, 2272, 816, 1328, 816, 1328, 704, 2368, 704, 2368, 1824, 1216, 1824, 1216, 816, 1328, 816)
+polygon = PackedVector2Array(1342, 832, 1342, 1600, 2302, 1600, 2302, 824, 1342, 832, 1214, 704, 2430, 704, 2430, 1728, 1214, 1728, 1214, 704)
 
 [node name="player_fighting" parent="." instance=ExtResource("5_d435b")]
 position = Vector2(1808, 1232)

@@ -18,8 +18,10 @@ func start_minigame() -> void:
 
 func _process(delta: float) -> void:
 	if MinigameSettings.minigame_1_score >= 5:
+		print("Minigame Finnished!")
+		
+		Transitions.fade_into("res://source/maps/map2/map_2.tscn")
 		MinigameSettings.minigame_1_score = 0
-		Transitions.fade_into("res://source/maps/map_2/map_2.tscn")
 
 func _input(event: InputEvent) -> void:
 	if Input.is_action_just_pressed("open_settings"):

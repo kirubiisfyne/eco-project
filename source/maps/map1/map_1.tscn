@@ -798,7 +798,7 @@ world_map = NodePath("../..")
 z_index = 1
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="invs_wall"]
-polygon = PackedVector2Array(1328, 816, 1328, 1600, 2272, 1600, 2272, 816, 1328, 816, 1328, 704, 2368, 704, 2368, 1824, 1216, 1824, 1216, 816, 1328, 816)
+polygon = PackedVector2Array(1344, 816, 1344, 1600, 2304, 1600, 2304, 816, 1344, 816, 1216, 704, 2432, 704, 2432, 1728, 1216, 1728, 1216, 704)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 

@@ -1173,6 +1173,7 @@ world_map = NodePath("../../..")
 is_plant_wet = true
 
 [node name="Plant-on-Soil Quest 2" type="Node2D" parent="mis_list"]
+z_index = -1
 
 [node name="plot" parent="mis_list/Plant-on-Soil Quest 2" node_paths=PackedStringArray("quest_master", "world_map") instance=ExtResource("15_g14ej")]
 position = Vector2(198, 825)
@@ -1238,7 +1239,8 @@ z_index = 2
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="invs_wall"]
 z_index = 2
-polygon = PackedVector2Array(32, 992, 32, 1024, 0, 1024, 0, 0, 1280, 0, 1280, 1024, 32, 1024, 32, 992, 1248, 992, 1248, 32, 32, 32, 32, 976)
+position = Vector2(642.0086, 511.9831)
+polygon = PackedVector2Array(-578.0086, 384.0169, -706.0086, 512.0169, -706.0086, -575.9831, 701.9914, -575.9831, 701.9914, 512.0169, -706.0086, 512.0169, -578.0086, 384.0169, 573.9914, 384.0169, 573.9914, -447.9831, -578.0086, -447.9831)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
