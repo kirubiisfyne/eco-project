@@ -14,6 +14,7 @@ func interact() -> void:
 			else:
 				dialogue_sub.trash_bin_dial("not_finished")
 		2:
+			print("Map 2 Points: " + str(PlayerConditionals.map2_score))
 			if PlayerConditionals.map2_finished:
 				emit_signal("open_trash_bin")
 			else:

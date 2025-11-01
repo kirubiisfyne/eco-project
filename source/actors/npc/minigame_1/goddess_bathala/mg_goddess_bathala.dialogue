@@ -30,3 +30,19 @@ Goddess Bathala: That's the spirit!
 Goddess Bathala: Good luck!
 set MinigameSettings.minigame_start()
 => END
+
+~ start_mini_3
+Goddess Bathala: Oh! You’re back again!
+Goddess Bathala: This time… things might be a little tricky.
+- Tricky? How so?
+Goddess Bathala: The trashes have learned a new trick! They’re now hiding among the objects around you.
+- You mean… they can disguise themselves??
+Goddess Bathala: Exactly! They look just like normal objects… until they move.
+- That sounds creepy…
+Goddess Bathala: Hihi~ Don’t worry! You’ll be fine. Just keep your eyes sharp — if something twitches or slides even a little… it’s trash!
+- So what do I do when I find one?
+Goddess Bathala: Catch it of course!
+Goddess Bathala: Your mission today is to find and clean 4 disguised trashes!
+Goddess Bathala: Watch carefully, move quietly, and don’t let them fool you~
+set MinigameSettings.minigame_start()
+=> END

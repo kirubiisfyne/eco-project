@@ -1,6 +1,7 @@
 [remap]
 
-importer="dialogue_manager_compiler_13"
+importer="dialogue_manager"
+importer_version=15
 type="Resource"
 uid="uid://c0cg05itp0u2f"
 path="res://.godot/imported/mg_goddess_bathala.dialogue-439e15268d1986ee78b5d7a0136d8afc.tres"

@@ -1025,7 +1025,7 @@ dialogue_sub = NodePath("../dialogue_sub_manager")
 [node name="player" parent="." groups=["actors"] instance=ExtResource("4_6gfhc")]
 z_index = 1
 y_sort_enabled = true
-position = Vector2(448, 288)
+position = Vector2(336, 280)
 
 [node name="Camera2D" type="Camera2D" parent="player"]
 zoom = Vector2(3, 3)
@@ -1080,6 +1080,7 @@ dialogue_sub = NodePath("../dialogue_sub_manager")
 z_index = 1
 position = Vector2(407, 289)
 dialogue_sub = NodePath("../dialogue_sub_manager")
+map_id = 2
 
 [node name="mis_list" type="Node2D" parent="."]
 z_index = 2

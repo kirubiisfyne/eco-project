@@ -6,8 +6,8 @@
 [ext_resource type="Script" uid="uid://dyxa62gdu76am" path="res://source/actors/player/animation_manager.gd" id="3_3gojf"]
 [ext_resource type="Texture2D" uid="uid://2lbi3sjwv0t2" path="res://assets/objects/trashbag.png" id="5_fctc5"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_5t3f1"]
-radius = 8.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_06anx"]
+size = Vector2(16, 16)
 
 [sub_resource type="Animation" id="Animation_ojpjb"]
 length = 0.001
@@ -371,7 +371,7 @@ texture = ExtResource("5_fctc5")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." groups=["actors"]]
 position = Vector2(8, 8)
-shape = SubResource("CircleShape2D_5t3f1")
+shape = SubResource("RectangleShape2D_06anx")
 
 [node name="RayCast2D" type="RayCast2D" parent="."]
 position = Vector2(8, 8)

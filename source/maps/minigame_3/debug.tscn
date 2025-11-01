@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://cuox5o8kimyqh"]
+
+[ext_resource type="Script" uid="uid://blodhd0evb7dw" path="res://source/scripts/classes/dialogue_manager.gd" id="1_yd8up"]
+[ext_resource type="PackedScene" uid="uid://dvbdiuxk4fgdr" path="res://source/actors/player_fighting/player_fighting.tscn" id="2_0lfuh"]
+
+[node name="minigame_3" type="Node2D"]
+
+[node name="dialogue_sub_manager" type="Node" parent="."]
+script = ExtResource("1_yd8up")
+
+[node name="player_fighting" parent="." instance=ExtResource("2_0lfuh")]
+position = Vector2(641, 307)
+speed = 100.0
+
+[node name="Camera2D" type="Camera2D" parent="player_fighting"]
+zoom = Vector2(2.5, 2.5)
+limit_left = 378
+limit_top = 190
+limit_right = 861
+limit_bottom = 495
+
+[editable path="player_fighting"]
